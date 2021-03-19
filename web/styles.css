@@ -68,7 +68,7 @@ footer{
     scroll-snap-align: start;
 }
 
-/*** FINISH SECTION ***/
+/* <!-- SECTION 5: FINISH --> */
 
 .finish {
     display: flex;
@@ -86,19 +86,30 @@ footer{
     width: 50%;
     display: flex;
     margin-left: 0;
-    background-color: blue;
+    flex-wrap: wrap;
+}
+
+.finish main>h2 {
+    width: 100%;
+    margin-bottom: 3%;
+    color: red;
 }
 
 .finish img {
     width: 50%;
-    margin-right: 5%;
 }
 
 #itemDescription {
+    display: flex;
     width: 50%;
     padding: 15px;
     height: auto;
     min-height: 0;
+    flex-direction: column;
+}
+
+#itemDescription * {
+    margin: 0;
 }
 
 #tnc {
@@ -116,10 +127,4 @@ footer{
 .finish aside {
     width: 30%;
     padding: 15px 35px;
-    background-color: darkgreen;
-}
-
-/* TEMP */
-.hide {
-    display: none;
 }
