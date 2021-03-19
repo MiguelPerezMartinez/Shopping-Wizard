@@ -114,14 +114,16 @@ footer{
 
 #tnc {
     display: flex;
-    height: auto;
+    height: 20px;
     width: 100%;
     min-height: 0;
+    height: auto;
     justify-content: flex-start;
 }
 
 #tnc * {
     margin: 15px;
+    min-height: 0;
 }
 
 .finish aside {
