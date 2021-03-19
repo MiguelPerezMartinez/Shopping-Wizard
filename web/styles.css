@@ -10,8 +10,6 @@
 
 body{
     width:70%;
-    box-shadow:10px 10px 5px 5px rgb(189, 189, 189);
-    border-radius:10px;
 }
 
 header{
@@ -37,11 +35,12 @@ header{
 }
 
 .slide{
-    width: 100%;
-    height:600px;
+    width:100%;
+    height:700px;
     flex-shrink: 0;
     scroll-snap-align: start;
     display:flex;
+    position:relative;
 }
 
 main{
@@ -53,6 +52,8 @@ aside{
 }
 
 footer{
+    position:absolute;
+    bottom:0;
     width:100%;
     height:15%;
     min-height:100px;
@@ -60,6 +61,28 @@ footer{
     padding:20px;
     border-radius:0px 0px 10px 10px;
 }
+
+/* SECTION 2 : PORFILE */
+
+h2,
+form {
+    margin: 10px 50px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+small {
+    display: block;
+}
+
 
 
 
