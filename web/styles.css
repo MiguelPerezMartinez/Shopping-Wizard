@@ -52,3 +52,59 @@ footer{
     flex-shrink: 0;
     scroll-snap-align: start;
 }
+
+/*** FINISH SECTION ***/
+
+.finish {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 0;
+    padding: 5%;
+}
+
+.finish>h2 {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.finish main {
+    width: 50%;
+    display: flex;
+    margin-left: 0;
+    background-color: blue;
+}
+
+.finish img {
+    width: 50%;
+    margin-right: 5%;
+}
+
+#itemDescription {
+    width: 50%;
+    padding: 15px;
+    height: auto;
+    min-height: 0;
+}
+
+#tnc {
+    display: flex;
+    height: auto;
+    width: 100%;
+    min-height: 0;
+    justify-content: flex-start;
+}
+
+#tnc * {
+    margin: 15px;
+}
+
+.finish aside {
+    width: 30%;
+    padding: 15px 35px;
+    background-color: darkgreen;
+}
+
+/* TEMP */
+.hide {
+    display: none;
+}
