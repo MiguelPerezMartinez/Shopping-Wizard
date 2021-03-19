@@ -53,6 +53,28 @@ footer{
     background-color: rgb(238, 237, 237);
 }
 
+/* SECTION 2 : PORFILE */
+
+h2,
+form {
+    margin: 10px 50px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+small {
+    display: block;
+}
+
+
 
 
 /* <!-- SECTION 3: ADDRESS --> */
