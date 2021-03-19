@@ -8,7 +8,7 @@
 }
 
 body{
-    width:50%;
+    width:80%;
 }
 
 header{
@@ -72,9 +72,9 @@ footer{
 
 .finish {
     display: flex;
-    flex-wrap: wrap;
-    min-height: 0;
-    padding: 5%;
+    /* flex-wrap: wrap; */
+    /* min-height: 0; */
+    /* padding: 5%; */
 }
 
 .finish>h2 {
@@ -85,7 +85,7 @@ footer{
 .finish main {
     width: 50%;
     display: flex;
-    margin-left: 0;
+    /* margin-left: 0; */
     background-color: blue;
 }
 
