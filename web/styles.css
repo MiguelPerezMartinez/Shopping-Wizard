@@ -14,8 +14,10 @@ body{
 
 header{
     width:100%;
-    height:15%;
     min-height:100px;
+    background-color:#6B5853;
+    border-radius:10px 10px 0px 0px;
+    margin-top:50px;
 }
 
 .general{
@@ -36,8 +38,25 @@ header{
 
 section{
     width:100%;
-    height:700px;
     display:flex;
+}
+
+main{
+    display: flex;
+}
+
+aside{
+    width:20%;
+}
+
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    min-height:100px;
+    background-color:#6B5853;
+    padding:20px;
+    border-radius:0px 0px 10px 10px;
 }
 
 /* left side */
@@ -105,24 +124,6 @@ section{
 }
 
 
-main{
-    display: flex;
-}
-
-aside{
-    width:20%;
-}
-
-footer{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:15%;
-    min-height:100px;
-    background-color:#6B5853;
-    padding:20px;
-    border-radius:0px 0px 10px 10px;
-}
 
 /* SECTION 2 : PORFILE */
 
