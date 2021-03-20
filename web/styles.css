@@ -1,7 +1,6 @@
-
 * {
     margin: 0 auto;
-    padding: 0;
+    padding: 0px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -9,6 +8,7 @@
 }
 
 body{
+    margin: 0 auto;
     width:70%;
 }
 
@@ -58,6 +58,9 @@ footer{
     padding:20px;
     border-radius:0px 0px 10px 10px;
 }
+
+
+/* SECTION 1: PRODUCT */
 
 /* left side */
 
