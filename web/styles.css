@@ -157,61 +157,34 @@ small {
 
 /* <!-- SECTION 5: FINISH --> */
 
-.finish {
+#five {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+}
+
+#five main {
     display: flex;
     flex-wrap: wrap;
-    min-height: 0;
-    padding: 5%;
+    width: 70%;
 }
 
-.finish>h2 {
+#five main>h2 {
     width: 100%;
-    margin-bottom: 3%;
 }
 
-.finish main {
-    width: 50%;
-    display: flex;
-    margin-left: 0;
-    flex-wrap: wrap;
+#five img {
+    max-width: 30%;
+    max-height: 30%;
 }
 
-.finish main>h2 {
+#terms {
     width: 100%;
-    margin-bottom: 3%;
-    color: red;
-}
-
-.finish img {
-    width: 50%;
-}
-
-#itemDescription {
     display: flex;
-    width: 50%;
-    padding: 15px;
-    height: auto;
-    min-height: 0;
-    flex-direction: column;
+    margin-top: 20px;
 }
 
-#itemDescription * {
-    margin: 0;
-}
-
-#tnc {
-    display: flex;
-    height: auto;
-    width: 100%;
-    min-height: 0;
-    justify-content: flex-start;
-}
-
-#tnc * {
-    margin: 15px;
-}
-
-.finish aside {
-    width: 30%;
-    padding: 15px 35px;
+#terms input {
+    margin-right: 15px;
 }
