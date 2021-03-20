@@ -182,9 +182,3 @@ small {
 #terms input {
     margin-right: 15px;
 }
-
-#pseudofooter {
-    height: 15%;
-    min-height: 100px;
-    width: 100%;
-}
