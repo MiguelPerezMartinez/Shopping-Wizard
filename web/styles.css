@@ -14,24 +14,8 @@ body{
 
 header{
     width:100%;
-    min-height:130px;
-    background-color:#6B5853;
-    margin-top:50px;
-    padding:20px;
-    color:#BBB5A0;
-    border-radius:10px 10px 0px 0px;
-}
-
-    header a{
-        text-decoration:none;
-        color:#BBB5A0;
-    }
-
-.general{
-    display: flex;
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
+    height:15%;
+    min-height:100px;
 }
 
 .slide{
@@ -43,8 +27,73 @@ header{
     position:relative;
 }
 
+/* left side */
+
+.left img{
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+/* center side */
+
+.center img{
+    margin-top: 2em;
+    margin-left: 1.2em;
+}
+
+/* right side */
+
+.right{
+    margin-top: 2em;
+    margin-left: 1.2em;
+}
+
+.right h2{
+    margin-bottom: 1.7em;
+}
+
+.right p{
+    margin-bottom: 1.2em;
+}
+
+.right form{
+    margin-top: 2em;
+    outline: none;
+}
+
+.right select{
+    height: 50px;
+    width: 82%;
+    outline: none;
+    border: 2px solid rgb(202, 201, 201);
+}
+
+.button-buy{
+    background-color: black;
+    margin-top: 1em;
+    margin-left: 0;
+    padding: 18px 0px;
+    width: 82%;
+    text-align: center;
+}
+
+.button-buy a{
+    text-decoration: none;
+    color: white;
+}
+
+.membership{
+    margin-top: .9em;
+    font-weight: bold;
+}
+
+.location{
+    margin-top: 2em;
+}
+
+
 main{
-    width:80%;
+    display: flex;
 }
 
 aside{
