@@ -5,18 +5,27 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    color:#43322F;
 }
 
 body{
-    width:80%;
+    width:70%;
 }
 
 header{
     width:100%;
-    height:15%;
-    min-height:100px;
-    background-color: rgb(238, 237, 237);
+    min-height:130px;
+    background-color:#6B5853;
+    margin-top:50px;
+    padding:20px;
+    color:#BBB5A0;
+    border-radius:10px 10px 0px 0px;
 }
+
+    header a{
+        text-decoration:none;
+        color:#BBB5A0;
+    }
 
 .general{
     display: flex;
@@ -26,16 +35,12 @@ header{
 }
 
 .slide{
-    width: 100%;
-    height:100%;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-}
-
-section{
     width:100%;
     height:700px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
     display:flex;
+    position:relative;
 }
 
 main{
@@ -47,11 +52,37 @@ aside{
 }
 
 footer{
+    position:absolute;
+    bottom:0;
     width:100%;
     height:15%;
     min-height:100px;
-    background-color: rgb(238, 237, 237);
+    background-color:#6B5853;
+    padding:20px;
+    border-radius:0px 0px 10px 10px;
 }
+
+/* SECTION 2 : PORFILE */
+
+h2,
+form {
+    margin: 10px 50px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+small {
+    display: block;
+}
+
 
 
 
@@ -62,19 +93,12 @@ footer{
     flex-direction:column;
 }
 
-.slide{
-    width: 100%;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-}
-
 /* <!-- SECTION 5: FINISH --> */
 
 .finish {
     display: flex;
     flex-wrap: wrap;
     min-height: 0;
-    padding: 5%;
 }
 
 .finish>h2 {
