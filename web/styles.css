@@ -16,7 +16,6 @@ header{
     width:100%;
     height:15%;
     min-height:100px;
-    background-color: rgb(238, 237, 237);
 }
 
 section{
@@ -25,8 +24,73 @@ section{
     min-height:600px;
 }
 
-main{
+/* left side */
 
+.left img{
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+/* center side */
+
+.center img{
+    margin-top: 2em;
+    margin-left: 1.2em;
+}
+
+/* right side */
+
+.right{
+    margin-top: 2em;
+    margin-left: 1.2em;
+}
+
+.right h2{
+    margin-bottom: 1.7em;
+}
+
+.right p{
+    margin-bottom: 1.2em;
+}
+
+.right form{
+    margin-top: 2em;
+    outline: none;
+}
+
+.right select{
+    height: 50px;
+    width: 82%;
+    outline: none;
+    border: 2px solid rgb(202, 201, 201);
+}
+
+.button-buy{
+    background-color: black;
+    margin-top: 1em;
+    margin-left: 0;
+    padding: 18px 0px;
+    width: 82%;
+    text-align: center;
+}
+
+.button-buy a{
+    text-decoration: none;
+    color: white;
+}
+
+.membership{
+    margin-top: .9em;
+    font-weight: bold;
+}
+
+.location{
+    margin-top: 2em;
+}
+
+
+main{
+    display: flex;
 }
 
 aside{
