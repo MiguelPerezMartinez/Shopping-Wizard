@@ -10,12 +10,13 @@
 body{
     margin: 0 auto;
     width:70%;
+    background-color:#EDE8E2;
 }
 
 header{
     width:100%;
     min-height:100px;
-    background-color:#6B5853;
+    background-color:#EDE8E2;
     border-radius:10px 10px 0px 0px;
     margin-top:50px;
 }
@@ -25,6 +26,7 @@ header{
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
     scroll-behavior: smooth;
+    background-color:#EDE8E2;
 }
 
 .slide{
@@ -47,6 +49,7 @@ main{
 
 aside{
     width:20%;
+    border:1px solid #A69D94;
 }
 
 footer{
@@ -54,7 +57,7 @@ footer{
     bottom:0;
     width:100%;
     min-height:100px;
-    background-color:#6B5853;
+    background-color:#EDE8E2;
     padding:20px;
     border-radius:0px 0px 10px 10px;
 }
