@@ -179,18 +179,19 @@ legend{
     border-radius:100%;
     width:20px;
     height:20px;
-    box-shadow: 0px 0px 0px 2000px #E3DFD2;
+    box-shadow: 0px 0px 0px 2000px #C9C2BA;
 }
 
 #progress-bar{
     position:absolute;
     top:37px;
-    left:12.5%;
-    right:11%;
+    left:12.4%;
+    right:10.8%;
     height:10px;
     border-radius:10px;
     margin-top:10px;
-    background-color:black;
+    background-color:#EDE8E2;
+    border:1px solid;
     z-index:0;
 }
 
@@ -198,11 +199,25 @@ legend{
     display:block;
     margin-left:0;
     border-radius:10px;
-    width:63%;
+    width:66%;
     height:10px;
-    background-color:blue;
+    background-color:#A69D94;
 }
 
+.circle-one{
+    background-color:#A69D94;
+}
+
+.circle-two{
+    background-color:#A69D94;
+}
+
+.circle-three{
+    background-color:#A69D94;
+}
+
+.circle-four{
+}
 
 /* TIMER */
 
