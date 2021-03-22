@@ -18,6 +18,7 @@ header{
     min-height:100px;
     background-color:#EDE8E2;
     border-radius:10px 10px 0px 0px;
+    margin-top:50px;
 }
 
 .general{
@@ -30,7 +31,7 @@ header{
 
 .slide{
     width:100%;
-    height:750px;
+    height:700px;
     flex-shrink: 0;
     scroll-snap-align: start;
     display:flex;
@@ -50,15 +51,12 @@ main{
 }
 
 aside{
+    background-color:#A69D94;
     padding:0% 2%;
     width:40%;
     height:90%;
+    border:1px solid #A69D94;
     z-index:2;
-}
-
-aside *{
-    width:100%;
-    margin-bottom:10px;
 }
 
 .footer{
@@ -66,6 +64,7 @@ aside *{
     bottom:0px;
     width:100%;
     height:10%;
+    background-color:#94918e;
 }
 
 
@@ -86,36 +85,6 @@ aside *{
 * {
     -ms-overflow-style: none;
 }
-
-button{
-    background-color:#A69D94;
-    width:100%;
-    padding: 18px 0px;
-    text-align: center;
-    border:0px;
-}
-
-button:hover{
-    background-color:#807871;
-}
-
-button:focus{
-    background-color:#3d3936;
-    color:#A69D94;
-}
-
-select{
-    height:50px;
-    border:none;
-}
-
-*::placeholder{
-    padding-left:10px;
-}
-
-
-
-
 
 
 /* HEADER */
@@ -194,9 +163,6 @@ select{
 }
 
 
-/* TIMER */
-
-
 /* SECTION 1: PRODUCT */
 
 #one main{
@@ -230,6 +196,8 @@ select{
     background-size:cover;
 }
 
+/* center side */
+
 .center{
     margin:0 auto;
     min-width:60%;
@@ -241,188 +209,83 @@ select{
     background-position:center;
 }
 
-.atributo{
-    font-weight:bold;
+/* right side */
+
+.right{
 }
 
-.price{
-    margin-top:-20px;
-    font-size:30px;
+.right form{
+    outline: none;
 }
 
-.clothes-color{
-    display:flex;
-    flex-flow:wrap;
-}
-.clothes-color *{
-    width:30px;
-    height:40px;
-    background-position:center;
-    background-size:contain;
-    background-repeat:no-repeat;
+.right select{
+    outline: none;
+    border: 2px solid rgb(202, 201, 201);
 }
 
-.clothes-color *:hover{
-    border:1px solid #A69D94;
+.button-buy{
+    background-color: black;
+    padding: 18px 0px;
+    width: 82%;
+    text-align: center;
 }
 
-.crema{
-    background-image:url("img/hmgoepprodBlanca.jpeg");
+.button-buy a{
+    text-decoration: none;
+    color: white;
 }
 
-.marron{
-    background-image:url("img/hmgoepprodMarron.jpeg");
+.membership{
+    font-weight: bold;
 }
 
-.rojo{
-    background-image:url("img/hmgoepprodRojo.jpeg");
+.location{
 }
 
-.beige{
-    background-image:url("img/hmgoepprodBeige.jpeg");
-}
 
-.verde{
-    background-image:url("img/hmgoepprodVerde.jpeg");
-}
-
-.azul{
-    background-image:url("img/hmgoepprodAzul.jpeg");
-}
-
-#talla{
-    height:50px;
-    border:none;
-}
 
 /* SECTION 2 : PORFILE */
 
-#two main{
-    display:flex;
-    flex-direction:column;
-    margin-left:20%;
-    width:25%;
-}
 
-#two main h2{
-    margin-left:0;
-}
 
-#two main form{
-    margin-left:0;
-    display:flex;
-    flex-direction:column;
-    padding:20px 10%;
-}
-
-#two main form input{
-    height:50px;
-    border:none;
-    margin-top:10px;
-    margin-bottom:20px;
-}
 
 
 /* <!-- SECTION 3: ADDRESS --> */
 
-#three main{
+#address_form{
     display:flex;
     flex-direction:column;
-    margin-left:0;
-}
-
-#three main h2{
-    margin-left:0;
-}
-
-#three main form{
-    width:100%;
-    margin-left:0;
-    display:flex;
-}
-
-#three main form input{
-    height:50px;
-    border:none;
-    margin-top:10px;
-    margin-bottom:20px;
-}
-
-.uno{
-    margin:0 auto;
-    width:50%;
-    display:flex;
-    flex-direction:column;
-}
-
-.dos{
-    margin:0 auto;
-    width:50%;
-    display:flex;
-    flex-direction:column;
-}
-
-.uno *,.dos *{
-    width:90%;
-}
-
-#phone{
-    display:flex;
-    margin-left:0;
-}
-
-#phone select{
-    width:70px;
-}
-
-#phone input{
-    position:relative;
-    top:-10px;
-    padding:5px;
-}
-
-#regular-address{
-    display:flex;
-}
-
-#regular-address input{
-    width:20px;
-    height:20px;
-}
-#regular-address p{
-    position:relative;
-    top:25px;
-    left:10px;
 }
 
 /* <!-- SECTION 5: FINISH --> */
 
-#five main fieldset{
-    display:flex;
-    flex-wrap:wrap;
+#five {
+    flex-wrap: wrap;
+    align-items: flex-start;
+
 }
 
-.two-cols{
-    width:50%;
-    display:flex;
-    flex-direction:column;
-    padding:0 5%;
+#five main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
 }
 
-.two-cols *{
-    width:100%;
+#five main>h2 {
+    width: 100%;
 }
 
-.two-cols img{
-    height:100%;
-}
-
-#itemDescription{
-    display:flex;
-    flex-direction:column;
+#five img {
+    max-width: 30%;
+    max-height: 30%;
 }
 
 #terms {
     width: 100%;
     display: flex;
+    margin-top: 20px;
+}
+
+#terms input {
+    margin-right: 15px;
 }
