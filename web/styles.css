@@ -195,7 +195,14 @@ select{
 
 
 /* TIMER */
+.timer {
+    transition: all 3s;
+}
 
+.off {
+    transition: all 3s;
+    opacity: 0;
+}
 
 /* SECTION 1: PRODUCT */
 
