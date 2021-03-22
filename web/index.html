@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-ES">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,3 +68,219 @@
     </footer>
 </body>
 </html> 
+=======
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Shopping Wizard</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html"><img src="/web/img/logo_200x200.png" width="10%" alt="logo de la marca"></a>
+
+            <!-- PROGRESS BAR -->
+            <!-- <div class="pregress bar w3-light-grey w3-round-xlarge">
+                <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
+            </div> -->
+        </header>
+
+
+        <section class="general">
+
+        <!-- SECTION 1: MAIN PRODUCT -->
+
+            <section class="slide" id="one">
+                <main>
+                    <div class="left">
+                        <a href="index.html"><img src="/web/img/hmgoepprodBlanca.jpeg" width="100%" alt="sudadera blanca primer imagen"></a>
+                        <a href=""><img src="/web/img/hmgoepprodBlanca2.jpeg" width="100%" alt="sudadera blanca segunda imagen"></a>
+                    </div>
+                    <div class="center">
+                        <a href=""><img src="/web/img/hmgoepprodBlanca.jpeg"  alt="sudadera blanca imagen en grande"></a>
+                    </div>
+                    <div class="right">
+                        <h2 class="tittle">Sudadera con capucha</h2>
+                        <h2>19,99 €</h2>
+                        <p>Crema</p>
+                        <div class="clothes-color">
+                            <a href=""><img src="/web/img/hmgoepprodBlanca.jpeg" width="20%" alt="Sudadera crema"></a>
+                            <a href=""><img src="/web/img/hmgoepprodMarron.jpeg" width="20%" alt="Sudadera marron"></a>
+                            <a href=""><img src="/web/img/hmgoepprodRojo.jpeg" width="20%" alt="Sudadera roja"></a>
+                            <a href=""><img src="/web/img/hmgoepprodBeige.jpeg" width="20%" alt="Sudadera beige"></a>
+                            <a href=""><img src="/web/img/hmgoepprodVerde.jpeg" width="20%" alt="Sudadera verde"></a>
+                            <a href=""><img src="/web/img/hmgoepprodAzul.jpeg" width="20%" alt="Sudadera azul"></a>
+                        </div>
+                        <a href="https://www.google.es/maps/search/hym/@40.4043007,-3.7135857,12z" style="text-decoration: none;"><p class="location" style="color: black;">Encontrar en tienda</p></a>
+                        <form action="">
+                            <select name="sizes" id="">
+                                <option value="size">&nbsp;&nbsp;Seleccionar talla</option>
+                                <option value="xs">&nbsp;&nbsp;XS</option>
+                                <option value="s">&nbsp;&nbsp;S</option>
+                                <option value="m">&nbsp;&nbsp;M</option>
+                                <option value="l">&nbsp;&nbsp;L</option>
+                                <option value="xl">&nbsp;&nbsp;XL</option>
+                            </select>
+                        </form>
+                        <div class="button-buy">
+                            <a href="">AÑADIR</a>
+                        </div>
+                        <p class="membership">Hazte miembro hoy y consigue -15% en tu compra</p>
+                    </div>
+                </main>
+                <footer>
+
+                </footer>
+
+            </section>
+
+
+            <!-- SECTION 2: PROFILE -->
+
+            <section class="slide" id="two">
+                <div class="Profile">
+                    <main>
+                        <h2>Profile</h2>
+                        <br />
+                        <form>
+                            <label for="username">Username</label>
+                                <input type="text" id="username" placeholder="Enter a username" autocomplete="off" autofocus="on" minlength="5" maxlength="20" required />
+                            <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="name@example.com" autocomplete="off" autofocus="on" pattern="name@example.com" maxlength="50" required />
+                            <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Enter a password" autocomplete="off" autofocus="on"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Must contain at least one number and one uppercase and lowercase letter, and a min:8 and max:20 characters" required />
+                            <label for="confirm-password">Confirm password</label>
+                                <input type="password" id="confirm-password" placeholder="Confirm your password"  autocomplete="off" autofocus="on" required/>
+                        </form>
+                    </main>
+                    <aside>
+
+                    </aside>
+                </div>
+                <footer>
+
+                </footer>
+            </section>
+
+
+            <!-- SECTION 3: ADDRESS -->
+
+            <section class="slide" id="three">
+                <main>
+                    <div id="address_form">
+                        <div>
+                            <p>First Name</p>
+                            <input type="text" maxlength="20" required>
+                        </div>
+                        <div>
+                            <p>Last name</p>
+                            <input type="text" maxlength="20" required>
+                        </div>
+                        <div>
+                            <p>Birthday</p>
+                            <input type="date" required>
+                        </div>
+                        <div>
+                            <p>Address 1</p>
+                            <input type="text" maxlength="50" required>
+                        </div>
+                        <div>
+                            <p>Address 2</p>
+                            <input type="text" maxlength="50">
+                        </div>
+                        <div>
+                            <p>Postal code</p>
+                            <input type="number" maxlength="5" required>
+                        </div>
+                        <div>
+                            <p>Country</p>
+                            <select name="add_country">
+                                <option value="Andorra">Andorra</option>
+                                <option value="España">España</option>
+                                <option value="Francia">Francia</option>
+                                <option value="Alemania">Alemania</option>
+                                <option value="Grecia">Grecia</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p>Phone</p>
+                            <select name="add_phone_country">
+                                <option value="376 - AND">AND</option>
+                                <option value="34 - ESP">ESP</option>
+                                <option value="33 - FRA">FRA</option>
+                                <option value="49 - DEU">AND</option>
+                                <option value="30 - GRC">GRC</option>
+                            </select>
+                            <input type="tel" id="add_phone" name="add_phone" pattern="[0-9]{9}" required>
+                        </div>
+                        <div>
+                            <input type="checkbox"> This is my regular address
+                        </div>
+                    </div>
+                </main>
+                <aside>
+                    <div class="timer">
+                        <p>You started registering <b>$time minutes ago.</b></p>
+                        <p>Hurry up!</p>
+                    </div>
+                </aside>
+                <footer>
+
+                </footer>
+            </section>
+
+
+            <!-- SECTION 4: SHIPPING -->
+
+            <section class="slide" id="four">
+                <main>
+
+                </main>
+                <aside>
+
+                </aside>
+                <footer>
+
+                </footer>
+            </section>
+
+
+            <!-- SECTION 5: FINISH -->
+            <section class="slide" id="five">
+                <main>
+                    <h2>Your purchase</h2>
+                        <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F21%2F4d%2F214d9765f510970fa8e5b082f120c76503fab1ca.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_hoodiessweatshirts_hoodies%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"
+                            alt="">
+                        <section id="itemDescription">
+                            <h2>Product name</h2>
+                            <p>Size: <span></span></p>
+                            <p>Color: <span></span></p>
+                            <p>Estimated delivery date:</p>
+                            <P>Between...</P>
+                        </section>
+                        <div id="terms">
+                            <p><input type="checkbox" required>I have read and I accept the terms and conditions.</p>
+                        </div>
+                </main>
+
+                <aside>
+                    <div class="timer">
+                        <h3>Your order</h2>
+                        <p>Jumper: <span></span></p>
+                        <p><span></span> <span></span></p>
+                        <p>Total: <span></span></p>
+                    </div>
+                </aside>
+
+                <footer>
+
+                </footer>
+            </section>
+        </section>
+    </body>
+</html>
+>>>>>>> c012bd8658a3a335dd49d88b67309346c0247aa4
