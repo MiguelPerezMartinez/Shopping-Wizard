@@ -28,38 +28,41 @@
         <!-- SECTION 1: MAIN PRODUCT -->
 
             <section class="slide" id="one">
-                <main class="center">
+                <main>
                     <div class="left">
                         <a href="#"><div class="img-one"></div></a>
                         <a href="#"><div class="img-two"></div></a>
                     </div>
+                    <div class="center"></div>
                 </main>
                 <aside>
-                    <h2 class="tittle">Sudadera con capucha</h2>
-                    <h4 class="atributo">Precio:</h4>
-                    <p class="price">19,95€</p>
-                    <p>Crema</p>
-                    <div class="clothes-color">
-                        <div class="crema"></div>
-                        <div class="marron"></div>
-                        <div class="rojo"></div>
-                        <div class="beige"></div>
-                        <div class="verde"></div>
-                        <div class="azul"></div>
-                    </div>
-                    <h4 class="atributo">Size:</h4>
-                    <form action="">
-                        <select name="sizes" id="talla">
-                            <option value="size">&nbsp;&nbsp;Seleccionar talla</option>
-                            <option value="xs">&nbsp;&nbsp;XS</option>
-                            <option value="s">&nbsp;&nbsp;S</option>
-                            <option value="m">&nbsp;&nbsp;M</option>
-                            <option value="l">&nbsp;&nbsp;L</option>
-                            <option value="xl">&nbsp;&nbsp;XL</option>
-                        </select>
-                    </form>
-                    <button>AÑADIR</button>
-                    <p class="membership">Hazte miembro hoy y consigue -15% en tu compra</p>
+                    <fieldset>
+                        <legend><h2 class="tittle">Sudadera con capucha</h2></legend>
+                        <h4 class="atributo">Precio:</h4>
+                        <p class="price">19,95€</p>
+                        <p>Crema</p>
+                        <div class="clothes-color">
+                            <div class="crema"></div>
+                            <div class="marron"></div>
+                            <div class="rojo"></div>
+                            <div class="beige"></div>
+                            <div class="verde"></div>
+                            <div class="azul"></div>
+                        </div>
+                        <h4 class="atributo">Size:</h4>
+                        <form action="">
+                            <select name="sizes" id="talla">
+                                <option value="size">&nbsp;&nbsp;Seleccionar talla</option>
+                                <option value="xs">&nbsp;&nbsp;XS</option>
+                                <option value="s">&nbsp;&nbsp;S</option>
+                                <option value="m">&nbsp;&nbsp;M</option>
+                                <option value="l">&nbsp;&nbsp;L</option>
+                                <option value="xl">&nbsp;&nbsp;XL</option>
+                            </select>
+                        </form>
+                        <button>AÑADIR</button>
+                        <p class="membership">Hazte miembro hoy y consigue -15% en tu compra</p>
+                    </fieldset>
                 </aside>
                 <div class="footer">
 
@@ -165,7 +168,7 @@
                 <aside>
                     <fieldset>
                         <legend><h2>Timer</h2></legend>
-                        
+
                     </fieldset>
                 </aside>
                 <div class="footer">
@@ -178,7 +181,41 @@
 
             <section class="slide" id="four">
                 <main>
-
+                    <fieldset>
+                        <legend><h2>Shipping</h2></legend>
+                        <h4>Shipping type:</h4>
+                        <div>
+                            <input type="radio" id="shipping_time" name="free">
+                            <label for="free">Free Shipping</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="shipping_time" name="extra">
+                            <label for="extra">Extra Shipping (48h) <b>4,99€</b></label>
+                        </div>
+                        <div>
+                            <input type="radio" id="shipping_time" name="premium">
+                            <label for="premium">Premium Shipping (24h) <b>9,99€</b></label>
+                        </div>
+                        <div id="shipping-date">
+                            <h4>Your order will arrive:</h4>
+                            <p>ESTIMATED DELIVERY DATE:</p>
+                            <p id="shippingEstimate">
+                                $stimatedDate
+                            </p>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="gift" value="gift-toggle">
+                            <label for="gift-toggle">Is it a gift?</label>
+                        </div>
+                        <div>
+                            <label for="gift-message">Gift message:</label>
+                            <input class="message" type="text" name="gift-message"></input>
+                        </div>
+                        <div id="file-uploader">
+                            <label id="file-label" for="upload-photo">Browse...</label>
+                            <input type="file" name="photo" id="upload-photo" />
+                        </div>
+                    </fieldset>
                 </main>
                 <aside>
                     <fieldset>
@@ -187,9 +224,10 @@
                     </fieldset>
                 </aside>
                 <div class="footer">
-
-                </div class="footer">
+                    
+                </div>
             </section>
+
 
 
             <!-- SECTION 5: FINISH -->
