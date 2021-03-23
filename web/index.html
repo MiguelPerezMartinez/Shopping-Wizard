@@ -104,6 +104,10 @@
                 <aside>
                     <fieldset>
                         <legend><h2>Next step</h2></legend>
+                        <div>
+                            <ul id="profile-info">
+                            </ul>
+                        </div>
                         <button id="profileBttn">Next</button>
                     </fieldset>
                     <fieldset class="timer off">
@@ -165,11 +169,11 @@
                                 <p>Phone</p>
                                 <div id="phone">
                                     <select id="phone-prefix" class="validable" name="add_phone_country">
-                                        <option value="376 - AND">AND</option>
-                                        <option value="34 - ESP">ESP</option>
-                                        <option value="33 - FRA">FRA</option>
-                                        <option value="49 - DEU">AND</option>
-                                        <option value="30 - GRC">GRC</option>
+                                        <option value="AND-376">AND</option>
+                                        <option value="ESP-34">ESP</option>
+                                        <option value="FRA-33">FRA</option>
+                                        <option value="DEU-49">AND</option>
+                                        <option value="GRC-30">GRC</option>
                                     </select>
                                     <input type="tel" id="add-phone" class="validable" placeholder="Phone" name="add_phone" pattern="[0-9]{9}" required>
                                 </div>
@@ -183,14 +187,19 @@
                     </fieldset>
                 </main>
                 <aside>
+                    <fieldset>
+                        <legend><h2>Next step</h2></legend>
+                        <div>
+                            <ul id="address-info">
+                            </ul>
+                        </div>
+                        <button id="addressBttn">Next</button>
+                    </fieldset>
                     <fieldset class="timer off">
                         <legend><h2>Timer</h2></legend>
 
                     </fieldset>
                 </aside>
-                <div class="footer">
-                    <button id="addressBttn">Next</button>
-                </div class="footer">
             </section>
 
 
@@ -240,14 +249,16 @@
                     </fieldset>
                 </main>
                 <aside>
+                    <fieldset>
+                        <legend><h2>Next step</h2></legend>
+
+                        <button id="shippingBttn">Next</button>
+                    </fieldset>
                     <fieldset class="timer off">
                         <legend><h2>Timer</h2></legend>
 
                     </fieldset>
                 </aside>
-                <div class="footer">
-                    <button id="shippingBttn">Next</button>
-                </div>
             </section>
 
 
@@ -297,6 +308,6 @@
     <script src="validation.js"></script>
     
     <!-- <script src="client.js"></script> -->
-    <!-- <script src="info.js"></script> -->
+    <script src="info.js"></script>
     </body>
 </html>

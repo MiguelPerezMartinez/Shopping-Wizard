@@ -123,6 +123,16 @@ legend{
     border-radius:10px;
 }
 
+#profile-info{
+    text-decoration:none;
+    list-style:none;
+}
+
+#address-info{
+    text-decoration:none;
+    list-style:none;
+}
+
 
 /* HEADER */
 #progress-bar-container{
