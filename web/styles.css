@@ -109,9 +109,6 @@ select{
     border:none;
 }
 
-*::placeholder{
-    padding-left:10px;
-}
 
 fieldset{
     border-radius:10px;
@@ -124,8 +121,6 @@ legend{
     padding:0px 100px;
     border-radius:10px;
 }
-
-
 
 
 /* HEADER */
@@ -199,7 +194,7 @@ legend{
     display:block;
     margin-left:0;
     border-radius:10px;
-    width:66%;
+    width:34%;
     height:10px;
     background-color:#A69D94;
 }
@@ -444,8 +439,17 @@ legend{
     margin-left:20%;
 }
 
+#four main fieldset h4{
+    margin-bottom:0px;
+}
+
 #four main fieldset *{
     margin-bottom:10px;
+}
+
+.gift-title{
+    margin-top:10px;
+    height:20px;
 }
 
 .message{
@@ -455,8 +459,8 @@ legend{
 }
 
 #shipping-date{
+    display:none;
     margin:10px 0px;
-    display:block;
     border:1px solid;
     padding:0px 10px 10px;
 }
@@ -509,10 +513,6 @@ legend{
 
 .two-cols *{
     width:100%;
-}
-
-.two-cols img{
-    height:100%;
 }
 
 #itemDescription{
