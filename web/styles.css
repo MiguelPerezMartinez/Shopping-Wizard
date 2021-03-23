@@ -34,6 +34,7 @@ header{
     flex-shrink: 0;
     scroll-snap-align: start;
     display:flex;
+    flex-wrap:wrap;
     position:relative;
 }
 
@@ -62,7 +63,7 @@ aside *{
 }
 
 .footer{
-    position:absolute;
+    position:relative;
     bottom:0px;
     width:100%;
     height:10%;
@@ -412,15 +413,16 @@ legend{
     padding:5px;
 }
 
-#regular-address{
+.regular-address{
     display:flex;
 }
 
-#regular-address input{
+.regular-address input{
     width:20px;
     height:20px;
 }
-#regular-address p{
+
+.regular-address p{
     position:relative;
     top:25px;
     left:10px;

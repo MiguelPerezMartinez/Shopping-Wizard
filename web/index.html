@@ -74,7 +74,7 @@
                                 <option value="xl">&nbsp;&nbsp;XL</option>
                             </select>
                         </form>
-                        <button>AÑADIR</button>
+                        <button>BUY</button>
                         <p class="membership">Hazte miembro hoy y consigue -15% en tu compra</p>
                     </fieldset>
                 </aside>
@@ -91,7 +91,7 @@
                         <legend><h2>Profile</h2></legend>
                         <form>
                             <label for="username">Username</label>
-                            <input type="text" id="username" class="validable" placeholder="Enter a username" maxlength="20" required />
+                            <input autocomplete="" type="text" id="username" class="validable" placeholder="Enter a username" maxlength="20" required />
                             <label for="email">Email</label>
                             <input type="email" id="email" class="validable" placeholder="name@example.com" maxlength="30" required />
                             <label for="password">Password</label>
@@ -102,13 +102,17 @@
                     </fieldset>
                 </main>
                 <aside>
+                    <fieldset>
+                        <legend><h2>Next step</h2></legend>
+                        <button id="profileBttn">Next</button>
+                    </fieldset>
                     <fieldset class="timer off">
                         <legend><h2>Timer</h2></legend>
 
                     </fieldset>
                 </aside>
                 <div class="footer">
-                    <button id="profileBttn">Next</button>
+                    
                 </div class="footer">
             </section>
 
@@ -131,7 +135,7 @@
                             </div>
                             <div>
                                 <p>Birthday</p>
-                                <input type="date" placeholder="Birthday" required>
+                                <input type="date" id="birthday" class="validable" placeholder="Birthday" data-date-format="DD/MM/YYYY" required>
                             </div>
                             <div>
                                 <p>Address 1</p>
@@ -160,7 +164,7 @@
                             <div>
                                 <p>Phone</p>
                                 <div id="phone">
-                                    <select id="phone-prefix" name="add_phone_country">
+                                    <select id="phone-prefix" class="validable" name="add_phone_country">
                                         <option value="376 - AND">AND</option>
                                         <option value="34 - ESP">ESP</option>
                                         <option value="33 - FRA">FRA</option>
@@ -170,8 +174,8 @@
                                     <input type="tel" id="add-phone" class="validable" placeholder="Phone" name="add_phone" pattern="[0-9]{9}" required>
                                 </div>
                             </div>
-                            <div id="regular-address">
-                                <input type="checkbox">
+                            <div class="regular-address">
+                                <input type="checkbox" id="regular-address" class="validable">
                                 <p>This is my regular address</p>
                             </div>
                         </div>
@@ -291,5 +295,8 @@
         </section>
     <script src="app.js"></script>
     <script src="validation.js"></script>
+    
+    <!-- <script src="client.js"></script> -->
+    <!-- <script src="info.js"></script> -->
     </body>
 </html>

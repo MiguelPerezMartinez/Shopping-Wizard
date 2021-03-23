@@ -41,11 +41,10 @@ function profileAdd(client) {
     client.gMessage = document.querySelector('input[name="gift-message"]').value;
     client.gImage = document.getElementById('upload-photo').value;
 
-    console.log(client);
+    // console.log(client);
     /* return client; */
 }
 
 document.getElementById('profileBttn').addEventListener('click', profileAdd);
 document.getElementById('addressBttn').addEventListener('click', profileAdd);
 document.getElementById('shippingBttn').addEventListener('click', profileAdd);
-
