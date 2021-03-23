@@ -109,9 +109,6 @@ select{
     border:none;
 }
 
-*::placeholder{
-    padding-left:10px;
-}
 
 fieldset{
     border-radius:10px;
@@ -124,8 +121,6 @@ legend{
     padding:0px 100px;
     border-radius:10px;
 }
-
-
 
 
 /* HEADER */
