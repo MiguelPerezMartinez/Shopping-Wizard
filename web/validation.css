@@ -3,5 +3,8 @@ input{
   padding:5%;
 }
 
+.show{
+    display:block;
+}
 
 .test{color:rgb(166, 253, 192)}

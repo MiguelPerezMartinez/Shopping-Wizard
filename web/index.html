@@ -88,17 +88,17 @@
             <section class="slide" id="two">
                 <main>
                     <fieldset>
-                    <legend><h2>Profile</h2></legend>
-                    <form>
-                        <label for="username">Username</label>
+                        <legend><h2>Profile</h2></legend>
+                        <form>
+                            <label for="username">Username</label>
                             <input type="text" id="username" class="validable" placeholder="Enter a username" maxlength="20" required />
-                        <label for="email">Email</label>
+                            <label for="email">Email</label>
                             <input type="email" id="email" class="validable" placeholder="name@example.com" maxlength="30" required />
-                        <label for="password">Password</label>
+                            <label for="password">Password</label>
                             <input type="password" id="password" class="validable" placeholder="A - a - number - >8 - <20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Must contain at least one number and one uppercase and lowercase letter, and a min:8 and max:20 characters" required />
-                        <label for="confirm-password">Confirm password</label>
+                            <label for="confirm-password">Confirm password</label>
                             <input type="password" id="confirm-password" class="validable" placeholder="Confirm your password"  autocomplete="off" required/>
-                    </form>
+                        </form>
                     </fieldset>
                 </main>
                 <aside>
@@ -122,11 +122,11 @@
                         <div class="uno">
                             <div>
                                 <p>First Name</p>
-                                <input type="text" placeholder="First name" maxlength="20" required>
+                                <input type="text" id="first-name" class="validable" placeholder="First name" maxlength="20" required>
                             </div>
                             <div>
                                 <p>Last name</p>
-                                <input type="text" placeholder="Last name" maxlength="20" required>
+                                <input type="text" id="last-name" class="validable" placeholder="Last name" maxlength="20" required>
                             </div>
                             <div>
                                 <p>Birthday</p>
@@ -134,21 +134,21 @@
                             </div>
                             <div>
                                 <p>Address 1</p>
-                                <input type="text" placeholder="Address 1" maxlength="50" required>
+                                <input type="text" id="address-one" class="validable" placeholder="Address 1" maxlength="50" required>
                             </div>
                             <div>
                                 <p>Address 2</p>
-                                <input type="text" placeholder="Address 2" maxlength="50">
+                                <input type="text" id="address-two" class="validable" placeholder="Address 2" maxlength="50">
                             </div>
                         </div>
                         <div class="dos">
                             <div>
                                 <p>Postal code</p>
-                                <input type="number" placeholder="Postal code" maxlength="5" required>
+                                <input type="number" id="postal-code" class="validable" placeholder="Postal code" maxlength="5" required>
                             </div>
                             <div>
                                 <p>Country</p>
-                                <select name="add_country">
+                                <select id="country" class="validable" name="add_country">
                                     <option value="Andorra">Andorra</option>
                                     <option value="España">España</option>
                                     <option value="Francia">Francia</option>
@@ -159,14 +159,14 @@
                             <div>
                                 <p>Phone</p>
                                 <div id="phone">
-                                    <select name="add_phone_country">
+                                    <select id="phone-prefix" name="add_phone_country">
                                         <option value="376 - AND">AND</option>
                                         <option value="34 - ESP">ESP</option>
                                         <option value="33 - FRA">FRA</option>
                                         <option value="49 - DEU">AND</option>
                                         <option value="30 - GRC">GRC</option>
                                     </select>
-                                    <input type="tel" id="add_phone" placeholder="Phone" name="add_phone" pattern="[0-9]{9}" required>
+                                    <input type="tel" id="add-phone" class="validable" placeholder="Phone" name="add_phone" pattern="[0-9]{9}" required>
                                 </div>
                             </div>
                             <div id="regular-address">
@@ -196,15 +196,15 @@
                         <legend><h2>Shipping</h2></legend>
                         <h4>Shipping type:</h4>
                         <div>
-                            <input type="radio" id="shipping_time" name="free">
+                            <input type="radio" id="shipping-time" name="shipping-time">
                             <label for="free">Free Shipping</label>
                         </div>
                         <div>
-                            <input type="radio" id="shipping_time" name="extra">
+                            <input type="radio" id="shipping-time" name="shipping-time">
                             <label for="extra">Extra Shipping (48h) <b>4,99€</b></label>
                         </div>
                         <div>
-                            <input type="radio" id="shipping_time" name="premium">
+                            <input type="radio" id="shipping-time" name="shipping-time">
                             <label for="premium">Premium Shipping (24h) <b>9,99€</b></label>
                         </div>
                         <div id="shipping-date">
@@ -215,12 +215,12 @@
                             </p>
                         </div>
                         <div>
-                            <input type="checkbox" name="gift" value="gift-toggle">
+                            <input type="checkbox" id="gift" name="gift" value="gift-toggle">
                             <label for="gift-toggle">Is it a gift?</label>
                         </div>
                         <div>
                             <label for="gift-message">Gift message:</label>
-                            <input class="message" type="text" name="gift-message"></input>
+                            <input class="message" id="gift-message" type="text" name="gift-message"></input>
                         </div>
                         <div id="file-uploader">
                             <label id="file-label" for="upload-photo">Browse...</label>

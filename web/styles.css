@@ -450,8 +450,8 @@ legend{
 }
 
 #shipping-date{
+    display:none;
     margin:10px 0px;
-    display:block;
     border:1px solid;
     padding:0px 10px 10px;
 }

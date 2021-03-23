@@ -3,6 +3,14 @@ $inputs.forEach((input) => {
   input.addEventListener('keyup',validation);
 });
 
+$shipping_type = document.querySelectorAll("#shipping-time");
+$shipping_type.forEach((type) => {
+  type.addEventListener('click',shippingCheck);
+})
+
+$gift = document.querySelector("#gift");
+$gift.addEventListener('ch')
+
 function validation(event){
   let target = event.target
   let valid = false
@@ -19,6 +27,24 @@ function validation(event){
     case "confirm-password":
       valid = validConfirmPassword(target);
       break;
+    case "first-name":
+      valid = validFirstLastName(event,target);
+      break;
+    case "last-name":
+      valid = validFirstLastName(event,target);
+      break;
+    case "address-one":
+      valid = validAddress(target);
+      break;
+    case "address-two":
+      valid = validAddress(target);
+      break;
+    case "postal-code":
+      valid = validPostalCode(target);
+      break;
+    case "add-phone":
+      valid = validPhone(target);
+      break;
     default:
       console.log("default");
   }
@@ -32,11 +58,7 @@ function validation(event){
 // VALIDATION REQUIREMENTS
 
 function validUsername(event,target){
-  if(target.value.length <= 4 || target.value.length >= 13 || parseInt(event.key) >= 0){
-    return false;
-  }else{
-    return true;
-  }
+  return (target.value.length >= 4 || target.value.length <= 13);
 }
 
 function validEmail(target){
@@ -46,18 +68,31 @@ function validEmail(target){
 
 function validPassword(target){
   let pattern = /^[a-zA-Z0-9_*!¡"·$%&/()=?¿+-]+$/;
-  if(pattern.test(target.value) && target.value.length >= 8 && target.value.length <= 20){
-    return true;
-  }else{
-    return false;
-  }
+  return (pattern.test(target.value) && target.value.length >= 8 && target.value.length <= 20);
 }
 
 function validConfirmPassword(target){
   let password = document.querySelector("#password");
-  if(validPassword(target) && target.value == password.value){
-    return true;
-  }else{
-    return false;
-  }
+  return (validPassword(target) && target.value == password.value);
+}
+
+function validFirstLastName(event,target){
+  return !(target.value.length <= 4 || target.value.length >= 20 || parseInt(event.key) >= 0);
+}
+
+function validAddress(target){
+  return (target.value.length >= 4 || target.value.length <= 50);
+}
+
+function validPostalCode(target){
+  return (target.value.length <= 5 && parseInt(target.value) >= 0);
+}
+
+function validPhone(target){
+  return (target.value.length <= 9 && parseInt(target.value) >= 0);
+}
+
+function shippingCheck(event){
+  let arrival = document.querySelector("#shipping-date");
+  arrival.style.display = "block";
 }
