@@ -3,8 +3,8 @@ input{
   padding:5%;
 }
 
-.show{
-    display:block;
+.gift-message{
+  display:none;
 }
 
 .test{color:rgb(166, 253, 192)}

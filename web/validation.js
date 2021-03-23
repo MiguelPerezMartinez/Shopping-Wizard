@@ -9,7 +9,7 @@ $shipping_type.forEach((type) => {
 })
 
 $gift = document.querySelector("#gift");
-$gift.addEventListener('ch')
+$gift.addEventListener('click',giftChecked);
 
 function validation(event){
   let target = event.target
@@ -95,4 +95,14 @@ function validPhone(target){
 function shippingCheck(event){
   let arrival = document.querySelector("#shipping-date");
   arrival.style.display = "block";
+}
+
+function giftChecked(event){
+  if(event.target.checked == true){
+    console.log(event.target.checked);
+    document.querySelector(".gift-message").style.display = "block";
+  }else{
+    console.log(event.target.checked);
+    document.querySelector(".gift-message").style.display = "none";
+  };
 }
