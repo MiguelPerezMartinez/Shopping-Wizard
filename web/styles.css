@@ -439,8 +439,17 @@ legend{
     margin-left:20%;
 }
 
+#four main fieldset h4{
+    margin-bottom:0px;
+}
+
 #four main fieldset *{
     margin-bottom:10px;
+}
+
+.gift-title{
+    margin-top:10px;
+    height:20px;
 }
 
 .message{

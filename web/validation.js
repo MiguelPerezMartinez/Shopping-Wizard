@@ -3,7 +3,7 @@ $inputs.forEach((input) => {
   input.addEventListener('keyup',validation);
 });
 
-$shipping_type = document.querySelectorAll("#shipping-time");
+$shipping_type = document.querySelectorAll(".shipping-time");
 $shipping_type.forEach((type) => {
   type.addEventListener('click',shippingCheck);
 })
@@ -81,7 +81,7 @@ function validFirstLastName(event,target){
 }
 
 function validAddress(target){
-  return (target.value.length >= 4 || target.value.length <= 50);
+  return (target.value.length >= 4 && target.value.length <= 50);
 }
 
 function validPostalCode(target){
@@ -95,6 +95,23 @@ function validPhone(target){
 function shippingCheck(event){
   let arrival = document.querySelector("#shipping-date");
   arrival.style.display = "block";
+
+  let shipping_date = new Date()
+  switch(event.target.id){
+    case "free-shipping":
+      shipping_date.setDate(shipping_date.getDate() + 5);
+      console.log(shipping_date.toLocaleDateString());
+      break;
+    case "extra-shipping":
+      shipping_date.setDate(shipping_date.getDate() + 2);
+      console.log(shipping_date.toLocaleDateString());
+      break;
+    case "premium-shipping":
+      shipping_date.setDate(shipping_date.getDate() + 1);
+      console.log(shipping_date.toLocaleDateString());
+      break;
+  }
+  document.getElementById("shipping-estimate").innerHTML = shipping_date.toLocaleDateString();
 }
 
 function giftChecked(event){

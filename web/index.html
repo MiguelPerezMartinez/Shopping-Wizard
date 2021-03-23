@@ -196,22 +196,21 @@
                         <legend><h2>Shipping</h2></legend>
                         <h4>Shipping type:</h4>
                         <div>
-                            <input type="radio" id="shipping-time" name="shipping-time">
+                            <input type="radio" id="free-shipping" class="shipping-time" name="shipping-time">
                             <label for="free">Free Shipping</label>
                         </div>
                         <div>
-                            <input type="radio" id="shipping-time" name="shipping-time">
+                            <input type="radio" id="extra-shipping" class="shipping-time" name="shipping-time">
                             <label for="extra">Extra Shipping (48h) <b>4,99€</b></label>
                         </div>
                         <div>
-                            <input type="radio" id="shipping-time" name="shipping-time">
+                            <input type="radio" id="premium-shipping" class="shipping-time" name="shipping-time">
                             <label for="premium">Premium Shipping (24h) <b>9,99€</b></label>
                         </div>
                         <div id="shipping-date">
                             <h4>Your order will arrive:</h4>
                             <p>ESTIMATED DELIVERY DATE:</p>
-                            <p id="shippingEstimate">
-                                $stimatedDate
+                            <p id="shipping-estimate">
                             </p>
                         </div>
                         <div>
@@ -219,8 +218,14 @@
                             <label for="gift-toggle">Is it a gift?</label>
                         </div>
                         <div class="gift-message">
-                            <label for="gift-message">Gift message:</label>
-                            <input class="message" id="gift-message" type="text" name="gift-message"></input>
+                            <div>
+                                <label for="gift-title">Gift title:</label>
+                                <input class="gift-title" id="gift-title" type="text" name="gift-title"></input>
+                            </div>
+                            <div>
+                                <label for="gift-message">Gift message:</label>
+                                <input class="message" id="gift-message" type="textarea" name="gift-message"></input>
+                            </div>
                         </div>
                         <div id="file-uploader">
                             <label id="file-label" for="upload-photo">Browse...</label>
@@ -231,7 +236,7 @@
                 <aside>
                     <fieldset class="timer off">
                         <legend><h2>Timer</h2></legend>
-                        
+
                     </fieldset>
                 </aside>
                 <div class="footer">
