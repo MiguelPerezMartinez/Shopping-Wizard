@@ -318,10 +318,6 @@ legend{
     background-image:url("img/hmgoepprodMarron.jpeg");
 }
 
-<<<<<<< HEAD
-.rojo{
-    background-image:url("img/hmgoepprodRojo.jpeg");
-=======
 /*
 .center img{
     transform-origin: 30% 70%;
@@ -330,7 +326,6 @@ legend{
 
 .center img:hover{
     transform: scale(2);
->>>>>>> 87c22643ecdea38077a164267a07e6d7d56329c8
 }
 
 .beige{
