@@ -159,12 +159,15 @@ function shippingCheck(event){
   switch(event.target.id){
     case "free-shipping":
       shipping_date.setDate(shipping_date.getDate() + 5);
+      client.shippingEstimate = shipping_date;
       break;
     case "extra-shipping":
       shipping_date.setDate(shipping_date.getDate() + 2);
+      client.shippingEstimate = shipping_date;
       break;
     case "premium-shipping":
       shipping_date.setDate(shipping_date.getDate() + 1);
+      client.shippingEstimate = shipping_date;
       break;
   }
   document.getElementById("shipping-estimate").innerHTML = shipping_date.toLocaleDateString();
@@ -182,3 +185,6 @@ function giftChecked(event){
 document.getElementById('gift-message').onkeyup = function () {
   document.getElementById('gift-message-count').innerHTML = (100 - this.value.length);
 };
+
+
+
