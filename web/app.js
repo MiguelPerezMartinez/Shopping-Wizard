@@ -44,9 +44,19 @@ function minuteAlerts() {
 
         } else if (counter == 4 && finished == false) {
             console.log(counter);
-            alert('Te has pasao!');
-            let startPage = document.getElementById('one');
-            startPage.scrollIntoView();
+            let shade = document.createElement('div');
+            shade.id = 'popupShade';
+            document.querySelector('body').appendChild(shade);
+            let popup = document.createElement('div');
+            popup.id = 'popup';
+            popup.innerHTML = "<p>We are sorry but you've spent the maximum time allowed for the purchase.</p><p>You will be redirected to the main page in 5 seconds.</p>"
+            document.querySelector('body').appendChild(popup);
+            setTimeout(() => {
+                popup.remove();
+                shade.remove();
+                let startPage = document.getElementById('one');
+                startPage.scrollIntoView();
+            }, 5000);
             clearInterval(t);
         } else if (finished == true) {
             clearInterval(t);
