@@ -53,3 +53,44 @@ function minuteAlerts() {
 }
 
 minuteAlerts();
+
+//################    PROGRESS BAR
+
+// So this over here...
+/*
+
+function progressBar()  {
+    let progressState = document.getElementById("progress_state");
+
+    if (progressState == 1)   {
+        document.getElementById("progress").style.width = "0%";
+        document.getElementsByClassName("circle-one").style.visibility = 'visible';
+
+    }   else if (progressState == 2)    {
+        document.getElementById("progress").style.width = "34%";
+        document.getElementsByClassName("circle-two").style.visibility = 'visible';
+
+    }   else if (progressState == 3)    {
+        document.getElementById("progress").style.width = "67%";
+        document.getElementsByClassName("circle-three").style.visibility = 'visible';
+
+    }   else if (progressState == 4)    {
+        document.getElementById("progress").style.width = "100%";
+        document.getElementsByClassName("circle-four").style.visibility = 'visible';
+
+    }   else {
+        document.getElementById("progress").style.width = "0%";
+        document.getElementsByClassName("circle-one").style.visibility = 'hidden';
+        document.getElementsByClassName("circle-two").style.visibility = 'hidden';
+        document.getElementsByClassName("circle-three").style.visibility = 'hidden';
+        document.getElementsByClassName("circle-four").style.visibility = 'hidden';
+    }
+}
+*/
+
+//...is a mess!    | I'm all out of ideas on how to implement it. Sorry, but I'm bad at math.
+
+
+//MUST implement progress code in HTML. Add "progress_state" ID/class.
+
+//Another way to do it... By using event listeners on buttons "addressBttn", "profileBttn", etc.
