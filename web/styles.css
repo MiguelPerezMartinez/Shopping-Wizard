@@ -130,17 +130,7 @@ legend{
     border-radius:10px;
 }
 
-#profile-info{
-    text-decoration:none;
-    list-style:none;
-}
-
-#address-info{
-    text-decoration:none;
-    list-style:none;
-}
-
-#shipping-info{
+#profile-info#address-info,#shipping-info,#finish-info{
     text-decoration:none;
     list-style:none;
 }
