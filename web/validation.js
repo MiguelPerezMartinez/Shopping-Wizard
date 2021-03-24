@@ -111,7 +111,7 @@ function validation(event){
 // VALIDATION REQUIREMENTS
 
 function validUsername(event,target){
-  return (target.value.length >= 4 || target.value.length <= 13);
+  return (target.value.length >= 4 && target.value.length <= 13);
 }
 
 function validEmail(target){
@@ -143,7 +143,7 @@ function validAddress(target){
 }
 
 function validPostalCode(target){
-  return (target.value.length <= 5 && parseInt(target.value) >= 0);
+  return (target.value.length == 5 && parseInt(target.value) >= 0);
 }
 
 function validPhone(target){
