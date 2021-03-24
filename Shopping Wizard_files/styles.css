@@ -1,0 +1,291 @@
+* {
+    margin: 0 auto;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color:#43322F;
+}
+
+body{
+    margin: 0 auto;
+    width:70%;
+    background-color:#EDE8E2;
+}
+
+header{
+    width:100%;
+    min-height:100px;
+    background-color:#EDE8E2;
+    border-radius:10px 10px 0px 0px;
+    margin-top:50px;
+}
+
+.general{
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+    background-color:#EDE8E2;
+}
+
+.slide{
+    width:100%;
+    height:700px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    display:flex;
+    position:relative;
+}
+
+section{
+    width:100%;
+    display:flex;
+}
+
+main{
+    display: flex;
+    position:relative;
+    width:60%;
+    height:90%;
+}
+
+aside{
+    background-color:#A69D94;
+    padding:0% 2%;
+    width:40%;
+    height:90%;
+    border:1px solid #A69D94;
+    z-index:2;
+}
+
+.footer{
+    position:absolute;
+    bottom:0px;
+    width:100%;
+    height:10%;
+    background-color:#94918e;
+}
+
+
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+* {
+    -ms-overflow-style: none;
+}
+
+
+/* HEADER */
+#progress-bar-container{
+    position:relative;
+    width:100%;
+    height:75px;
+    display:flex;
+    flex-direction:column;
+    padding:10px;
+}
+
+#progress-bar-titles{
+    width:100%;
+}
+
+#progress-bar-titles ul{
+    width:100%;
+    display:flex;
+}
+
+#progress-bar-titles ul li{
+    display:block;
+}
+
+#progress-bar-checkpoints{
+    position:absolute;
+    top:37px;
+    width:100%;
+    display:flex;
+}
+
+#progress-bar-checkpoints>div{
+    width:25%;
+}
+
+.circle-border{
+    position:relative;
+    width:30px;
+    height:30px;
+    margin:0 auto;
+    overflow:hidden;
+    border-radius:100%;
+    z-index:1;
+}
+.circle-border:after{
+    content:'';
+    position:absolute;
+    left:5px;
+    top:5px;
+    border-radius:100%;
+    width:20px;
+    height:20px;
+    box-shadow: 0px 0px 0px 2000px #E3DFD2;
+}
+
+#progress-bar{
+    position:absolute;
+    top:37px;
+    left:12.5%;
+    right:11%;
+    height:10px;
+    border-radius:10px;
+    margin-top:10px;
+    background-color:black;
+    z-index:0;
+}
+
+#progress{
+    display:block;
+    margin-left:0;
+    border-radius:10px;
+    width:63%;
+    height:10px;
+    background-color:blue;
+}
+
+
+/* SECTION 1: PRODUCT */
+
+#one main{
+    width:100%;
+}
+/* left side */
+
+.left{
+    width:70px;
+    height:100%;
+    position:absolute;
+    top:20px;
+    left:10%;
+}
+
+.left div{
+    box-shadow:0px 0px 5px 0px gray;
+    width:70px;
+    height:90px;
+    margin-bottom:10px;
+}
+
+.left .img-one{
+    background-image:url("img/hmgoepprodBlanca.jpeg");
+    background-size:cover;
+}
+
+.left .img-two{
+    display: block;
+    background-image:url("img/hmgoepprodBlanca2.jpeg");
+    background-size:cover;
+}
+
+/* center side */
+
+.center{
+    margin:0 auto;
+    min-width:60%;
+    margin:2%;
+    height:100%;
+    background-image:url("img/hmgoepprodBlanca.jpeg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+/* right side */
+
+.right{
+}
+
+.right form{
+    outline: none;
+}
+
+.right select{
+    outline: none;
+    border: 2px solid rgb(202, 201, 201);
+}
+
+.button-buy{
+    background-color: black;
+    padding: 18px 0px;
+    width: 82%;
+    text-align: center;
+}
+
+.button-buy a{
+    text-decoration: none;
+    color: white;
+}
+
+.membership{
+    font-weight: bold;
+}
+
+.location{
+}
+
+
+
+/* SECTION 2 : PORFILE */
+
+
+
+
+
+/* <!-- SECTION 3: ADDRESS --> */
+
+#address_form{
+    display:flex;
+    flex-direction:column;
+}
+
+/* <!-- SECTION 5: FINISH --> */
+
+#five {
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+}
+
+#five main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+#five main>h2 {
+    width: 100%;
+}
+
+#five img {
+    max-width: 30%;
+    max-height: 30%;
+}
+
+#terms {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+
+#terms input {
+    margin-right: 15px;
+}
