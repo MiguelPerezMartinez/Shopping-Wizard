@@ -9,29 +9,14 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="validation.css">
         <title>Shopping Wizard</title>
-        <script src="/web/app.js" type="text/javascript"></script>  
+        <script src="/web/app.js" type="text/javascript"></script>
         <script type="text/javascript">
 
-           /* let $miniaturas = document.querySelectorAll(".clothes-color img");
-
-            $miniaturas.forEach((miniatura) => {
-                miniatura.addEventListener("click", change);
-
-            });
-
-            */
-            function change(num){
-                image = document.querySelectorAll(".clothes-color img")[num].src;
-                description = document.querySelectorAll(".clothes-color img")[num].alt;
-                big = document.images["imageMain"];
-                text = document.getElementById("colors");
-                big.src = image;
-                text.innerHTML = description;  
-            }
 
 
+          
 
-        </script> 
+        </script>
     </head>
 
     <body>
@@ -66,45 +51,52 @@
             <section class="slide" id="one">
                 <main>
                     <div class="left">
-                        <a href="#"><div class="img-one"></div></a>
-                        <a href="#"><div class="img-two"></div></a>
+                        <img src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg"  width="100%" alt="" border="0" style="cursor: pointer;">
+                        <img src="https://i.ibb.co/StD3PQx/hmgoepprod-Blanca2.jpg" width="100%" alt="" border="0" style="cursor: pointer;"> 
                     </div>
-                    <div class="center"></div>
-                </main>
-                <aside>
-                    <fieldset>
-                        <legend><h2>Sudadera con capucha</h2></legend>
-                        <h4 class="atributo">Precio:</h4>
-                        <p class="price">19,95€</p>
-                        <p>Crema</p>
-                        <div class="clothes-color">
-                            <div class="crema"></div>
-                            <div class="marron"></div>
-                            <div class="rojo"></div>
-                            <div class="beige"></div>
-                            <div class="verde"></div>
-                            <div class="azul"></div>
+                    <div class="center">
+                        <img id="imageMain" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" alt="Crema" border="0">
+                    </div>
+                    <div class="right">
+                        <h2 class="tittle">Sudadera con capucha</h2>
+                        <h2 id="price" alt="">19,99 €</h2>
+                        <p id="colors">Crema</p>
+                        <div id="hoodie" class="clothes-color">
+                            <img class="miniaturas" id="imageBlanca" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" width="20%" alt="Crema" style="cursor: pointer;" data-price="19,99€">
+                            <img class="miniaturas" onclick="change(1)" id="imageAzul" src="https://i.ibb.co/Yy6Rcg9/hmgoepprod-Azul.jpg"  width="20%" alt="Azul" border="0" style="cursor: pointer;" data-price="22,95€">
+                            <img class="miniaturas" onclick="change(2)" id="imageBeige" src="https://i.ibb.co/m0ygyvW/hmgoepprod-Beige.jpg" width="20%" alt="Beige" border="0" style="cursor: pointer;" data-price="24,99€">
+                            <img class="miniaturas" onclick="change(3)" id="imageMarron" src="https://i.ibb.co/bQsV0Jc/hmgoepprod-Marron.jpg"  width="20%" alt="Marron" border="0" style="cursor: pointer;" data-price="26,95€">
+                            <img class="miniaturas" onclick="change(4)" id="imageRojo" src="https://i.ibb.co/BK8XNBw/hmgoepprod-Rojo.jpg"  width="20%" alt="Rojo" border="0" style="cursor: pointer;" data-price="28,95€">
+                            <img class="miniaturas" onclick="change(5)" id="imageVerde" src="https://i.ibb.co/Y7Rnmwh/hmgoepprod-Verde.jpg"  width="20%" alt="Verde" border="0" style="cursor: pointer;" data-price="32,95€"> 
                         </div>
                         <h4 class="atributo">Size:</h4>
                         <form action="">
-                            <select name="sizes" id="talla">
-                                <option value="size">&nbsp;&nbsp;Seleccionar talla</option>
-                                <option value="xs">&nbsp;&nbsp;XS</option>
-                                <option value="s">&nbsp;&nbsp;S</option>
-                                <option value="m">&nbsp;&nbsp;M</option>
-                                <option value="l">&nbsp;&nbsp;L</option>
-                                <option value="xl">&nbsp;&nbsp;XL</option>
+                            <select name="sizes" id="sizes">
+                                <option value="size" >&nbsp;&nbsp;Seleccionar talla</option>
+                                <option value="xs" >&nbsp;&nbsp;XS</option>
+                                <option value="s" >&nbsp;&nbsp;S</option>
+                                <option value="m" >&nbsp;&nbsp;M</option>
+                                <option value="l" >&nbsp;&nbsp;L</option>
+                                <option value="xl" >&nbsp;&nbsp;XL</option>
                             </select>
                         </form>
-                        <button class="next"><a href="#two">BUY</a></button>
+                    
+                        <div class="button-buy">
+                            <a href="" onclick="createBuyer()">AÑADIR</a>
+                        </div>
+                   
+
+                     
                         <p class="membership">Hazte miembro hoy y consigue -15% en tu compra</p>
-                    </fieldset>
-                    <fieldset>
-                        <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
-                    </fieldset>
-                </aside>
-                <div class="footer">
-                </div class="footer">
+
+                        <!--display donde mostrar los productos-->
+                        <div id="displayListBuyers"></div>
+                    </div>
+                </main>
+                <footer>
+
+                </footer>
+
             </section>
 
 
@@ -296,6 +288,9 @@
 
                     </fieldset>
                 </aside>
+                <footer>
+
+                </footer>
             </section>
 
 
@@ -340,12 +335,14 @@
                     </fieldset>
                 </aside>
 
-                <div class="footer">
-                </div class="footer">
+                <footer>
+
+                </footer>
             </section>
         </section>
     <script src="app.js"></script>
     <script src="validation.js"></script>
+    <script src="product.js"></script>
 
     <!-- <script src="client.js"></script> -->
     <script src="info.js"></script>
