@@ -34,6 +34,7 @@ header{
     flex-shrink: 0;
     scroll-snap-align: start;
     display:flex;
+    flex-wrap:wrap;
     position:relative;
 }
 
@@ -62,7 +63,7 @@ aside *{
 }
 
 .footer{
-    position:absolute;
+    position:relative;
     bottom:0px;
     width:100%;
     height:10%;
@@ -109,9 +110,6 @@ select{
     border:none;
 }
 
-*::placeholder{
-    padding-left:10px;
-}
 
 fieldset{
     border-radius:10px;
@@ -125,7 +123,20 @@ legend{
     border-radius:10px;
 }
 
+#profile-info{
+    text-decoration:none;
+    list-style:none;
+}
 
+#address-info{
+    text-decoration:none;
+    list-style:none;
+}
+
+#shipping-info{
+    text-decoration:none;
+    list-style:none;
+}
 
 
 /* HEADER */
@@ -199,7 +210,7 @@ legend{
     display:block;
     margin-left:0;
     border-radius:10px;
-    width:66%;
+    width:34%;
     height:10px;
     background-color:#A69D94;
 }
@@ -417,15 +428,16 @@ legend{
     padding:5px;
 }
 
-#regular-address{
+.regular-address{
     display:flex;
 }
 
-#regular-address input{
+.regular-address input{
     width:20px;
     height:20px;
 }
-#regular-address p{
+
+.regular-address p{
     position:relative;
     top:25px;
     left:10px;
@@ -444,19 +456,46 @@ legend{
     margin-left:20%;
 }
 
+#four main fieldset h4{
+    margin-top:0px;
+    margin-bottom:10px;
+}
+
+#four main fieldset legend h2{
+    margin-bottom:0px;
+    padding:0px;
+}
+
 #four main fieldset *{
     margin-bottom:10px;
+}
+
+.gift-title{
+    margin-top:10px;
+    height:15px;
+    width:100%;
+}
+
+.gift-message{
+    position:relative;
 }
 
 .message{
     margin-top:10px;
     width:100%;
     height:100px;
+    padding:0px;
+}
+
+#gift-message-count {
+    position:absolute;
+    top:200px;
+    right:10px;
 }
 
 #shipping-date{
+    display:none;
     margin:10px 0px;
-    display:block;
     border:1px solid;
     padding:0px 10px 10px;
 }
@@ -509,10 +548,6 @@ legend{
 
 .two-cols *{
     width:100%;
-}
-
-.two-cols img{
-    height:100%;
 }
 
 #itemDescription{

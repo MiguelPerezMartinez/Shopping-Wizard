@@ -19,7 +19,9 @@ function minuteAlerts() {
         let endTime = new Date();
         let totalMls = endTime - startTime
         let totalTime = timeCalculus(totalMls);
-        document.querySelector('#five .footer').innerHTML = 'Your purchase took: ' + totalTime;
+        document.querySelector('#five .timer').classList.toggle('off');
+        document.querySelector('#five .timer').innerHTML = '<legend><h2>Total time</h2></legend>'
+        document.querySelector('#five .timer').innerHTML += 'Your purchase took: ' + totalTime;
         finished = true;
         return finished;
     });
