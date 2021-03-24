@@ -138,7 +138,7 @@ fieldset{
 legend{
     /* border:1px solid #A69D94; */
     text-align:center;
-    padding:0px 100px;
+    padding:0px 5%;
     border-radius:10px;
 }
 
@@ -501,11 +501,6 @@ legend{
 #four main fieldset h4{
     margin-top:0px;
     margin-bottom:10px;
-}
-
-#four main fieldset legend h2{
-    margin-bottom:0px;
-    padding:0px;
 }
 
 #four main fieldset *{
