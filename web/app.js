@@ -23,7 +23,7 @@ class Buyers{
 // creamos una funcion para nuestro usuario (comprador)
 
 function createBuyer(){
-    var price = document.getElementById("price"); // obtenemos el precio
+    var price = document.querySelector['data-price']; // obtenemos el precio
     var colors = document.getElementById("colors"); // obtenbemos el color en texto
     var hoodie = document.getElementById("hoodie").src; // obtenemos la imagen
     var sizes = document.getElementById("sizes").value; // obtenemos la talla
