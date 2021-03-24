@@ -1,3 +1,34 @@
+// CLIENT CONTENT RESET
+
+function resetClient() {
+    client = {
+        username: "",
+        email: "",
+        password: "",
+        firstName: "",
+        lastName: "",
+        birthday: "",
+        address1: "",
+        address2: "",
+        postalCode: "",
+        country: "",
+        phoneCode: "",
+        phone: "",
+        regularAddress: "",
+        shipping: "",
+        shippingEstimate: "",
+        gift: "",
+        gMessage: "",
+        gImage: ""
+    };
+
+    $inputs.forEach((input) => {
+        input.value = "";
+    });
+
+    document.getElementById("talla").value = "size";
+}
+
 //################    TIMER
 
 //Function to calculate the purchase time in minutes and seconds
@@ -58,6 +89,7 @@ function minuteAlerts() {
                 shade.remove();
                 let startPage = document.getElementById('one');
                 startPage.scrollIntoView();
+                resetClient();
             }, 5000);
             clearInterval(t);
 

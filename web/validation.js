@@ -16,7 +16,7 @@ $gift = document.querySelector("#gift");
 $gift.setAttribute("autocomplete","off");
 $gift.addEventListener('click',giftChecked);
 
-const client = {
+let client = {
   username: "",
   email: "",
   password: "",
