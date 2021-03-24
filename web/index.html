@@ -9,6 +9,21 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="validation.css">
         <title>Shopping Wizard</title>
+        <script src="/web/app.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+
+
+            // function change(event,num){
+            //     image = document.querySelectorAll(".clothes-color img")[num].src;
+            //     description = document.querySelectorAll(".clothes-color img")[num].alt;
+            //     big = document.images["imageMain"];
+            //     text = document.getElementById("colors");
+            //     big.src = image;
+            //     text.innerHTML = description;
+            // }
+
+        </script>
     </head>
 
     <body>
@@ -43,45 +58,52 @@
             <section class="slide" id="one">
                 <main>
                     <div class="left">
-                        <a href="#"><div class="img-one"></div></a>
-                        <a href="#"><div class="img-two"></div></a>
+                        <img src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg"  width="100%" alt="" border="0" style="cursor: pointer;">
+                        <img src="https://i.ibb.co/StD3PQx/hmgoepprod-Blanca2.jpg" width="100%" alt="" border="0" style="cursor: pointer;"> 
                     </div>
-                    <div class="center"></div>
-                </main>
-                <aside>
-                    <fieldset>
-                        <legend><h2>Sudadera con capucha</h2></legend>
-                        <h4 class="atributo">Precio:</h4>
-                        <p class="price">19,95€</p>
-                        <p>Crema</p>
-                        <div class="clothes-color">
-                            <div class="crema"></div>
-                            <div class="marron"></div>
-                            <div class="rojo"></div>
-                            <div class="beige"></div>
-                            <div class="verde"></div>
-                            <div class="azul"></div>
+                    <div class="center">
+                        <img id="imageMain" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" alt="Crema" border="0">
+                    </div>
+                    <div class="right">
+                        <h2 class="tittle">Sudadera con capucha</h2>
+                        <h2 id="price" alt="">19,99 €</h2>
+                        <p id="colors">Crema</p>
+                        <div id="hoodie" class="clothes-color">
+                            <img class="miniaturas" id="imageBlanca" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" width="20%" alt="Crema" style="cursor: pointer;" data-price="19,99€">
+                            <img class="miniaturas" onclick="change(1)" id="imageAzul" src="https://i.ibb.co/Yy6Rcg9/hmgoepprod-Azul.jpg"  width="20%" alt="Azul" border="0" style="cursor: pointer;" data-price="22,95€">
+                            <img class="miniaturas" onclick="change(2)" id="imageBeige" src="https://i.ibb.co/m0ygyvW/hmgoepprod-Beige.jpg" width="20%" alt="Beige" border="0" style="cursor: pointer;" data-price="24,99€">
+                            <img class="miniaturas" onclick="change(3)" id="imageMarron" src="https://i.ibb.co/bQsV0Jc/hmgoepprod-Marron.jpg"  width="20%" alt="Marron" border="0" style="cursor: pointer;" data-price="26,95€">
+                            <img class="miniaturas" onclick="change(4)" id="imageRojo" src="https://i.ibb.co/BK8XNBw/hmgoepprod-Rojo.jpg"  width="20%" alt="Rojo" border="0" style="cursor: pointer;" data-price="28,95€">
+                            <img class="miniaturas" onclick="change(5)" id="imageVerde" src="https://i.ibb.co/Y7Rnmwh/hmgoepprod-Verde.jpg"  width="20%" alt="Verde" border="0" style="cursor: pointer;" data-price="32,95€"> 
                         </div>
                         <h4 class="atributo">Size:</h4>
                         <form action="">
-                            <select name="sizes" id="talla">
-                                <option value="size">&nbsp;&nbsp;Seleccionar talla</option>
-                                <option value="xs">&nbsp;&nbsp;XS</option>
-                                <option value="s">&nbsp;&nbsp;S</option>
-                                <option value="m">&nbsp;&nbsp;M</option>
-                                <option value="l">&nbsp;&nbsp;L</option>
-                                <option value="xl">&nbsp;&nbsp;XL</option>
+                            <select name="sizes" id="sizes">
+                                <option value="size" >&nbsp;&nbsp;Seleccionar talla</option>
+                                <option value="xs" >&nbsp;&nbsp;XS</option>
+                                <option value="s" >&nbsp;&nbsp;S</option>
+                                <option value="m" >&nbsp;&nbsp;M</option>
+                                <option value="l" >&nbsp;&nbsp;L</option>
+                                <option value="xl" >&nbsp;&nbsp;XL</option>
                             </select>
                         </form>
-                        <button class="next"><a href="#two">BUY</a></button>
+                    
+                        <div class="button-buy">
+                            <a href="" onclick="createBuyer()">AÑADIR</a>
+                        </div>
+                   
+
+                     
                         <p class="membership">Hazte miembro hoy y consigue -15% en tu compra</p>
-                    </fieldset>
-                    <fieldset>
-                        <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
-                    </fieldset>
-                </aside>
-                <div class="footer">
-                </div class="footer">
+
+                        <!--display donde mostrar los productos-->
+                        <div id="displayListBuyers"></div>
+                    </div>
+                </main>
+                <footer>
+
+                </footer>
+
             </section>
 
 
@@ -118,11 +140,19 @@
                     <fieldset class="timer off">
                         <legend><h2>Timer</h2></legend>
 
+<<<<<<< HEAD
                     </fieldset>
                 </aside>
                 <div class="footer">
                     
                 </div class="footer">
+=======
+                    </aside>
+                </div>
+                <footer>
+
+                </footer>
+>>>>>>> 87c22643ecdea38077a164267a07e6d7d56329c8
             </section>
 
 
@@ -130,6 +160,7 @@
 
             <section class="slide" id="three">
                 <main>
+<<<<<<< HEAD
                     <fieldset>
                     <legend><h2>Address:</h2></legend>
                     <form>
@@ -187,6 +218,16 @@
                                 <input type="checkbox" id="regular-address" class="validable">
                                 <p>This is my regular address</p>
                             </div>
+=======
+                    <div id="address_form">
+                        <div>
+                            <p>First Name</p>
+                            <input type="text" maxlength="20" required>
+                        </div>
+                        <div>
+                            <p>Last name</p>
+                            <input type="text" maxlength="20" required>
+>>>>>>> 87c22643ecdea38077a164267a07e6d7d56329c8
                         </div>
                     </form>
                     </fieldset>
@@ -195,8 +236,13 @@
                     <fieldset>
                         <legend><h2>Next step</h2></legend>
                         <div>
+<<<<<<< HEAD
                             <ul id="address-info">
                             </ul>
+=======
+                            <p>Birthday</p>
+                            <input type="date" required>
+>>>>>>> 87c22643ecdea38077a164267a07e6d7d56329c8
                         </div>
                         <button id="addressBttn"><a href="#four">Next</a></button>
                     </fieldset>
@@ -219,6 +265,7 @@
                         <legend><h2>Shipping</h2></legend>
                         <h4>Shipping type:</h4>
                         <div>
+<<<<<<< HEAD
                             <input type="radio" id="free-shipping" class="shipping-time" name="shipping-time">
                             <label for="free">Free Shipping</label>
                         </div>
@@ -229,6 +276,18 @@
                         <div>
                             <input type="radio" id="premium-shipping" class="shipping-time" name="shipping-time">
                             <label for="premium">Premium Shipping (24h) <b>9,99€</b></label>
+=======
+                            <p>Address 1</p>
+                            <input type="text" maxlength="50" required>
+                        </div>
+                        <div>
+                            <p>Address 2</p>
+                            <input type="text" maxlength="50">
+                        </div>
+                        <div>
+                            <p>Postal code</p>
+                            <input type="number" maxlength="5" required>
+>>>>>>> 87c22643ecdea38077a164267a07e6d7d56329c8
                         </div>
                         <div id="shipping-date">
                             <h4>Your order will arrive on:</h4>
@@ -236,8 +295,20 @@
                             </p>
                         </div>
                         <div>
+<<<<<<< HEAD
                             <input type="checkbox" id="gift" name="gift" value="gift-toggle">
                             <label for="gift-toggle">Is it a gift?</label>
+=======
+                            <p>Phone</p>
+                            <select name="add_phone_country">
+                                <option value="376 - AND">AND</option>
+                                <option value="34 - ESP">ESP</option>
+                                <option value="33 - FRA">FRA</option>
+                                <option value="49 - DEU">AND</option>
+                                <option value="30 - GRC">GRC</option>
+                            </select>
+                            <input type="tel" id="add_phone" name="add_phone" pattern="[0-9]{9}" required>
+>>>>>>> 87c22643ecdea38077a164267a07e6d7d56329c8
                         </div>
                         <div class="gift-message">
                             <div>
@@ -250,11 +321,33 @@
                                 <div id="gift-message-count"></div>
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div id="file-uploader">
                             <label id="file-label" for="upload-photo">Browse...</label>
                             <input type="file" name="photo" id="upload-photo" />
                         </div>
                     </fieldset>
+=======
+                    </div>
+                </main>
+                <aside>
+                    <div class="timer">
+                        <p>You started registering <b>$time minutes ago.</b></p>
+                        <p>Hurry up!</p>
+                    </div>
+                </aside>
+                <footer>
+
+                </footer>
+            </section>
+
+
+            <!-- SECTION 4: SHIPPING -->
+
+            <section class="slide" id="four">
+                <main>
+
+>>>>>>> 87c22643ecdea38077a164267a07e6d7d56329c8
                 </main>
                 <aside>
                     <fieldset>
@@ -273,6 +366,9 @@
 
                     </fieldset>
                 </aside>
+                <footer>
+
+                </footer>
             </section>
 
 
@@ -317,12 +413,14 @@
                     </fieldset>
                 </aside>
 
-                <div class="footer">
-                </div class="footer">
+                <footer>
+
+                </footer>
             </section>
         </section>
     <script src="app.js"></script>
     <script src="validation.js"></script>
+    <script src="product.js"></script>
 
     <!-- <script src="client.js"></script> -->
     <script src="info.js"></script>
