@@ -88,8 +88,18 @@ aside *{
     -ms-overflow-style: none;
 }
 
+.buttons{
+    display:flex;
+}
+
+.buttons > button{
+    margin:5px;
+    border:0px;
+}
+
 button{
     background-color:#A69D94;
+    text-decoration:none;
     width:100%;
     text-align: center;
     border:0px;
@@ -97,11 +107,13 @@ button{
 
 button:hover{
     background-color:#807871;
+    border:0px;
 }
 
 button:focus{
-    background-color:#3d3936;
+    /* background-color:#3d3936; */
     color:#A69D94;
+    border:0px;
 }
 
 button a{
@@ -130,7 +142,7 @@ legend{
     border-radius:10px;
 }
 
-#profile-info#address-info,#shipping-info,#finish-info{
+#profile-info,#address-info,#shipping-info,#finish-info{
     text-decoration:none;
     list-style:none;
 }
