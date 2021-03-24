@@ -17,9 +17,9 @@ function minuteAlerts() {
     //Event listener that ends the purchase and shows the total time spent
     document.getElementById('finishBttn').addEventListener('click', () =>{
         let endTime = new Date();
-        let totalMls = endTime - startTime
+        let totalMls = endTime - startTime;
         let totalTime = timeCalculus(totalMls);
-        document.querySelector('#five .timer').classList.toggle('off');
+        document.querySelector('#five .timer').classList = 'timer';
         document.querySelector('#five .timer').innerHTML = '<legend><h2>Total time</h2></legend>'
         document.querySelector('#five .timer').innerHTML += 'Your purchase took: ' + totalTime;
         finished = true;
@@ -30,6 +30,7 @@ function minuteAlerts() {
     let timerArr = document.querySelectorAll('.timer');
 
     let t = setInterval(() => {
+        //Shows the timer popup every minute before reaching 5 minutes
         if (counter < 4 && finished == false) {
             console.log(counter);
             counter++;
@@ -42,6 +43,7 @@ function minuteAlerts() {
                 }, 5000);
             }
 
+        //Creates a popup to block the site and returns to the main page
         } else if (counter == 4 && finished == false) {
             console.log(counter);
             let shade = document.createElement('div');
@@ -58,11 +60,12 @@ function minuteAlerts() {
                 startPage.scrollIntoView();
             }, 5000);
             clearInterval(t);
+
+        //Ends the interval if the customer finishes the purchase
         } else if (finished == true) {
             clearInterval(t);
         }
     }, 20000); //60000
 }
 
-minuteAlerts();
-
+document.querySelectorAll('.next')[0].addEventListener('click', minuteAlerts);
