@@ -8,6 +8,14 @@ $inputs.forEach((input) => {
   input.addEventListener('clic',printInfo);
 });
 
+$shipping_type = document.querySelectorAll(".shipping-time");
+$shipping_type.forEach((type) => {
+  type.addEventListener('click',printInfo);
+})
+
+$gift = document.querySelector("#gift");
+$gift.addEventListener('click',printInfo);
+
 function printInfo(){
   var li = document.createElement("li");
   $profile_list.innerHTML = '<li>Username: ' + client.username + '</li>';
@@ -23,5 +31,6 @@ function printInfo(){
   $address_list.innerHTML += '<li>Regular address: ' + client.regularAddress + '</li>';
 
   $shipping_list.innerHTML = '<li>Shipping type: ' + client.shipping + '</li>';
-  $shipping_list.innerHTML += '<li>Last name: ' + client.lastName + '</li>';
+  $shipping_list.innerHTML += '<li>Stimated arrival: ' + client.shippingEstimate + '</li>';
+  $shipping_list.innerHTML += '<li>Gift message: ' + client.gift + "<br>" + client.gMessage + '</li>';
 }
