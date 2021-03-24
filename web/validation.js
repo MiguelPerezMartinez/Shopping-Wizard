@@ -21,7 +21,7 @@ $gift.addEventListener('click',giftChecked);
 
 //CLIENT OBJECT
 
-const client = {
+let client = {
   username: "",
   email: "",
   password: "",
