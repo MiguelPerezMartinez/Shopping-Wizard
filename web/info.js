@@ -1,9 +1,11 @@
 $profile_list = document.querySelector("#profile-info");
 $address_list = document.querySelector("#address-info");
+$shipping_list = document.querySelector("#shipping-info");
 $inputs = document.querySelectorAll(".validable");
 $inputs.forEach((input) => {
   input.setAttribute("autocomplete","off");
   input.addEventListener('focusout',printInfo);
+  input.addEventListener('clic',printInfo);
 });
 
 function printInfo(){
@@ -18,4 +20,8 @@ function printInfo(){
   $address_list.innerHTML += '<li>Postal code: ' + client.postalCode + '</li>';
   $address_list.innerHTML += '<li>Country: ' + client.country + '</li>';
   $address_list.innerHTML += '<li>Phone: ' + client.phoneCode + ' ' + client.phone + '</li>';
+  $address_list.innerHTML += '<li>Regular address: ' + client.regularAddress + '</li>';
+
+  $shipping_list.innerHTML = '<li>Shipping type: ' + client.shipping + '</li>';
+  $shipping_list.innerHTML += '<li>Last name: ' + client.lastName + '</li>';
 }

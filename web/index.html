@@ -15,7 +15,6 @@
         <header>
             <a href="index.html"><img src="/web/img/logo_200x200.png" width="10%" alt="logo de la marca"></a>
 
-            <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
             <!-- PROGRESS BAR -->
             <div id="progress-bar-container">
                 <div id="progress-bar-titles">
@@ -77,6 +76,9 @@
                         <button>BUY</button>
                         <p class="membership">Hazte miembro hoy y consigue -15% en tu compra</p>
                     </fieldset>
+                    <fieldset>
+                        <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
+                    </fieldset>
                 </aside>
                 <div class="footer">
                 </div class="footer">
@@ -109,6 +111,9 @@
                             </ul>
                         </div>
                         <button id="profileBttn">Next</button>
+                    </fieldset>
+                    <fieldset>
+                        <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
                     </fieldset>
                     <fieldset class="timer off">
                         <legend><h2>Timer</h2></legend>
@@ -195,6 +200,9 @@
                         </div>
                         <button id="addressBttn">Next</button>
                     </fieldset>
+                    <fieldset>
+                        <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
+                    </fieldset>
                     <fieldset class="timer off">
                         <legend><h2>Timer</h2></legend>
 
@@ -223,8 +231,7 @@
                             <label for="premium">Premium Shipping (24h) <b>9,99€</b></label>
                         </div>
                         <div id="shipping-date">
-                            <h4>Your order will arrive:</h4>
-                            <p>ESTIMATED DELIVERY DATE:</p>
+                            <h4>Your order will arrive on:</h4>
                             <p id="shipping-estimate">
                             </p>
                         </div>
@@ -239,7 +246,8 @@
                             </div>
                             <div>
                                 <label for="gift-message">Gift message:</label>
-                                <input class="message" id="gift-message" type="textarea" name="gift-message"></input>
+                                <textarea class="message" id="gift-message" rows="10" cols="50" maxlength="100" name="gift-message"></textarea>
+                                <div id="gift-message-count"></div>
                             </div>
                         </div>
                         <div id="file-uploader">
@@ -251,8 +259,14 @@
                 <aside>
                     <fieldset>
                         <legend><h2>Next step</h2></legend>
-
+                        <div>
+                            <ul id="shipping-info">
+                            </ul>
+                        </div>
                         <button id="shippingBttn">Next</button>
+                    </fieldset>
+                    <fieldset>
+                        <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
                     </fieldset>
                     <fieldset class="timer off">
                         <legend><h2>Timer</h2></legend>
@@ -294,9 +308,12 @@
                         <p>Total: <span></span></p>
                         <button id="finishBttn">FINISH</button>
                     </fieldset>
+                    <fieldset>
+                        <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
+                    </fieldset>
                     <fieldset class="timer off">
                         <legend><h2>Timer</h2></legend>
-                        
+
                     </fieldset>
                 </aside>
 
@@ -306,7 +323,7 @@
         </section>
     <script src="app.js"></script>
     <script src="validation.js"></script>
-    
+
     <!-- <script src="client.js"></script> -->
     <script src="info.js"></script>
     </body>

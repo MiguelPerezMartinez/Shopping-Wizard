@@ -2,12 +2,8 @@ $inputs = document.querySelectorAll(".validable");
 $inputs.forEach((input) => {
   input.setAttribute("autocomplete","off");
   input.addEventListener('keyup',validation);
-});
-$inputs.forEach((input) => {
-  input.addEventListener('click',validation);
-});
-$inputs.forEach((input) => {
   input.addEventListener('focusout',validation);
+  input.addEventListener('click',validation);
 });
 
 $shipping_type = document.querySelectorAll(".shipping-time");
@@ -44,7 +40,6 @@ const client = {
 function validation(event){
   let target = event.target;
   let valid = false;
-  console.log(target.value);
   switch(event.target.id){
     case "username":
       valid = validUsername(event,target);
@@ -71,6 +66,7 @@ function validation(event){
       break;
     case "birthday":
       valid = validBirthday(target);
+      if (valid == true){client.birthday = event.target.value;};
       break;
     case "address-one":
       valid = validAddress(target);
@@ -91,16 +87,15 @@ function validation(event){
     case "phone-prefix":
       valid = true;
       client.phoneCode = event.target.value;
-      console.log(event.target.value);
       break;
     case "add-phone":
       valid = validPhone(target);
       if (valid == true){client.phone = event.target.value;};
       break;
     case "regular-address":
+      //PENDIENTE DE TERMINAR
       valid = true;
       if (valid == true){client.regularAddress = event.target.value;};
-      console.log(client)
       break;
     default:
       console.log("default");
@@ -139,7 +134,6 @@ function validFirstLastName(event,target){
 }
 
 function validBirthday(target){
-  console.log(target.value);
   let pattern = /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/
   return (pattern.test(target.value));
 }
@@ -157,6 +151,7 @@ function validPhone(target){
 }
 
 function shippingCheck(event){
+  console.log("shipping check");
   let arrival = document.querySelector("#shipping-date");
   arrival.style.display = "block";
 
@@ -183,3 +178,7 @@ function giftChecked(event){
     document.querySelector(".gift-message").style.display = "none";
   };
 }
+
+document.getElementById('gift-message').onkeyup = function () {
+  document.getElementById('gift-message-count').innerHTML = (100 - this.value.length);
+};
