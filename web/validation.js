@@ -1,3 +1,5 @@
+//EVENT LISTENERS FOR INPUTS/SHIPPING/GIFT
+
 $inputs = document.querySelectorAll(".validable");
 $inputs.forEach((input) => {
   input.setAttribute("autocomplete","off");
@@ -16,6 +18,9 @@ $gift = document.querySelector("#gift");
 $gift.setAttribute("autocomplete","off");
 $gift.addEventListener('click',giftChecked);
 
+
+//CLIENT OBJECT
+
 const client = {
   username: "",
   email: "",
@@ -32,10 +37,14 @@ const client = {
   regularAddress: "",
   shipping: "",
   shippingEstimate: "",
+  shippingPrice: "",
   gift: "",
   gMessage: "",
   gImage: ""
 };
+
+
+//VALIDATION FUNCTION
 
 function validation(event){
   let target = event.target;
@@ -93,7 +102,7 @@ function validation(event){
       if (valid == true){client.phone = event.target.value;};
       break;
     case "regular-address":
-      //PENDIENTE DE TERMINAR
+      //TODO: Pendiente de que al guardar en el objeto sea true o false. Se queda siempre en On.
       valid = true;
       if (valid == true){client.regularAddress = event.target.value;};
       break;
@@ -138,7 +147,7 @@ function validConfirmPassword(target){
 }
 
 function validFirstLastName(event,target){
-  return !(target.value.length <= 4 || target.value.length >= 20 || parseInt(event.key) >= 0);
+  return !(target.value.length < 3 || target.value.length >= 20 || parseInt(event.key) >= 0);
 }
 
 function validBirthday(target){
@@ -166,8 +175,7 @@ function validGiftMessage(target){
   return (target.value.length >= 5 && target.value.length <= 100);
 }
 
-
-
+//SHIPPING SELECTION
 
 function shippingCheck(event){
   console.log("shipping check");
@@ -179,14 +187,17 @@ function shippingCheck(event){
     case "free-shipping":
       shipping_date.setDate(shipping_date.getDate() + 5);
       client.shippingEstimate = shipping_date;
+      client.shippingPrice = event.target.dataset.price;
       break;
     case "extra-shipping":
       shipping_date.setDate(shipping_date.getDate() + 2);
       client.shippingEstimate = shipping_date;
+      client.shippingPrice = event.target.dataset.price;
       break;
     case "premium-shipping":
       shipping_date.setDate(shipping_date.getDate() + 1);
       client.shippingEstimate = shipping_date;
+      client.shippingPrice = event.target.dataset.price;
       break;
   }
   document.getElementById("shipping-estimate").innerHTML = shipping_date.toLocaleDateString();
@@ -194,6 +205,9 @@ function shippingCheck(event){
   client.shippingEstimate = shipping_date.toLocaleDateString();
   console.log(client);
 }
+
+
+//GIFT BOX/TITLE & MESSAGE
 
 function giftChecked(event){
   if(event.target.checked == true){
