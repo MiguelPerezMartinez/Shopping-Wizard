@@ -97,6 +97,14 @@ function validation(event){
       valid = true;
       if (valid == true){client.regularAddress = event.target.value;};
       break;
+    case "gift-title":
+      valid = validGiftTitle(target);
+      if (valid == true){client.gift = event.target.value;};
+      break;
+    case "gift-message":
+      valid = validGiftMessage(target);
+      if (valid == true){client.gMessage = event.target.value;};
+      break;
     default:
       console.log("default");
       valid = false;
@@ -147,8 +155,19 @@ function validPostalCode(target){
 }
 
 function validPhone(target){
-  return (target.value.length <= 9 && parseInt(target.value) >= 0);
+  return (target.value.length == 9 && parseInt(target.value) >= 0);
 }
+
+function validGiftTitle(target){
+  return (target.value.length >= 5 && target.value.length <= 20);
+}
+
+function validGiftMessage(target){
+  return (target.value.length >= 5 && target.value.length <= 100);
+}
+
+
+
 
 function shippingCheck(event){
   console.log("shipping check");
@@ -171,7 +190,9 @@ function shippingCheck(event){
       break;
   }
   document.getElementById("shipping-estimate").innerHTML = shipping_date.toLocaleDateString();
+  client.shipping = event.target.value;
   client.shippingEstimate = shipping_date.toLocaleDateString();
+  console.log(client);
 }
 
 function giftChecked(event){

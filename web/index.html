@@ -219,15 +219,15 @@
                         <legend><h2>Shipping</h2></legend>
                         <h4>Shipping type:</h4>
                         <div>
-                            <input type="radio" id="free-shipping" class="shipping-time" name="shipping-time">
+                            <input type="radio" id="free-shipping" class="shipping-time" name="shipping-time" value="Free Shipping">
                             <label for="free">Free Shipping</label>
                         </div>
                         <div>
-                            <input type="radio" id="extra-shipping" class="shipping-time" name="shipping-time">
+                            <input type="radio" id="extra-shipping" class="shipping-time" name="shipping-time" value="Extra Shipping">
                             <label for="extra">Extra Shipping (48h) <b>4,99€</b></label>
                         </div>
                         <div>
-                            <input type="radio" id="premium-shipping" class="shipping-time" name="shipping-time">
+                            <input type="radio" id="premium-shipping" class="shipping-time" name="shipping-time" value="Premium Shipping">
                             <label for="premium">Premium Shipping (24h) <b>9,99€</b></label>
                         </div>
                         <div id="shipping-date">
@@ -242,17 +242,17 @@
                         <div class="gift-message">
                             <div>
                                 <label for="gift-title">Gift title:</label>
-                                <input class="gift-title" id="gift-title" type="text" name="gift-title"></input>
+                                <input class="gift-title validable" id="gift-title" type="text" name="gift-title"></input>
                             </div>
                             <div>
                                 <label for="gift-message">Gift message:</label>
-                                <textarea class="message" id="gift-message" rows="10" cols="50" maxlength="100" name="gift-message"></textarea>
+                                <textarea class="message validable" id="gift-message" rows="10" cols="50" maxlength="100" name="gift-message"></textarea>
                                 <div id="gift-message-count"></div>
                             </div>
-                        </div>
-                        <div id="file-uploader">
-                            <label id="file-label" for="upload-photo">Browse...</label>
-                            <input type="file" name="photo" id="upload-photo" />
+                            <div id="file-uploader">
+                                <label id="file-label" for="upload-photo">Browse...</label>
+                                <input type="file" name="photo" id="upload-photo" />
+                            </div>
                         </div>
                     </fieldset>
                 </main>
@@ -306,7 +306,7 @@
                         <p>Jumper: <span></span></p>
                         <p><span></span> <span></span></p>
                         <p>Total: <span></span></p>
-                        <button id="finishBttn">FINISH</button>
+                        <button id="finishBttn"><a href="#">FINISH</a></button>
                     </fieldset>
                     <fieldset>
                         <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
