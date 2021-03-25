@@ -1,6 +1,30 @@
+//  FINISH POPUP
+
+function finishPopup() {
+    //We create a shaded layer that covers all the viewport
+    let endShade = document.createElement('div');
+    endShade.className = 'popupShade';
+    document.querySelector('body').appendChild(endShade);
+    //Main element where the 'Purchase ended' data is shown
+    let endPopup = document.createElement('div');
+    EndPopup.id = 'endPopup';
+    //Product section with info and the image
+    let endProduct = document.createElement('div');
+    endProduct.id = 'endProduct';
+    let endImg = document.createElement('div');
+    
+    document.querySelector('#endProduct div:first-child').setAttribute('background-image', 'url')
+    let endInfo = document.createElement('div');
+    endInfo.innerHTML = 
+    EndPopup.innerHTML = "<p>We are sorry but you've spent the maximum time allowed for the purchase.</p><p>You will be redirected to the main page in 5 seconds.</p>"
+    document.querySelector('body').appendChild(EndPopup);
+}
+
+
 // CLIENT CONTENT RESET
 
 function resetClient() {
+    //We set the product again to empty it
     client = {
         username: "",
         email: "",
@@ -22,10 +46,12 @@ function resetClient() {
         gImage: ""
     };
 
+    //Removing all content from the input fields
     $inputs.forEach((input) => {
         input.value = "";
     });
 
+    //Getting the size selector to default
     document.getElementById("talla").value = "size";
 }
 
@@ -50,9 +76,7 @@ function minuteAlerts() {
         let endTime = new Date();
         let totalMls = endTime - startTime;
         let totalTime = timeCalculus(totalMls);
-        document.querySelector('#five .timer').classList = 'timer';
-        document.querySelector('#five .timer').innerHTML = '<legend><h2>Total time</h2></legend>'
-        document.querySelector('#five .timer').innerHTML += 'Your purchase took: ' + totalTime;
+
         finished = true;
         return finished;
     });
@@ -78,7 +102,7 @@ function minuteAlerts() {
         } else if (counter == 4 && finished == false) {
             console.log(counter);
             let shade = document.createElement('div');
-            shade.id = 'popupShade';
+            shade.className = 'popupShade';
             document.querySelector('body').appendChild(shade);
             let popup = document.createElement('div');
             popup.id = 'popup';

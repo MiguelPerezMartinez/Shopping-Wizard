@@ -247,7 +247,7 @@ legend{
     opacity: 0;
 }
 
-#popupShade {
+.popupShade {
     background-color: #EDE8E2;
     opacity: .7;
     position: fixed;
@@ -599,4 +599,28 @@ legend{
 #terms {
     width: 100%;
     display: flex;
+}
+
+#endPopup {
+    position: fixed;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    margin-top: -150px;
+    margin-left: -250px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+    z-index: 3;
+    border-radius: 10px;
+}
+
+#endProduct div:first-child {
+    width: 20%;
+    background-repeat: none;
+    background-size: cover;
 }
