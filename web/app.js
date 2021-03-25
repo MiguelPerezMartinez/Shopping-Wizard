@@ -1,23 +1,47 @@
-//  FINISH POPUP
+//  END POPUP
 
-function finishPopup() {
+function endPopup() {
     //We create a shaded layer that covers all the viewport
     let endShade = document.createElement('div');
     endShade.className = 'popupShade';
     document.querySelector('body').appendChild(endShade);
+
     //Main element where the 'Purchase ended' data is shown
     let endPopup = document.createElement('div');
-    EndPopup.id = 'endPopup';
+    endPopup.id = 'endPopup';
+
     //Product section with info and the image
     let endProduct = document.createElement('div');
     endProduct.id = 'endProduct';
+
+    //Product image
     let endImg = document.createElement('div');
-    
-    document.querySelector('#endProduct div:first-child').setAttribute('background-image', 'url')
+    let imgUrl = 'url("' + OurBuyersData[0].hoodie + '")';
+
+    //Product info
     let endInfo = document.createElement('div');
-    endInfo.innerHTML = 
-    EndPopup.innerHTML = "<p>We are sorry but you've spent the maximum time allowed for the purchase.</p><p>You will be redirected to the main page in 5 seconds.</p>"
-    document.querySelector('body').appendChild(EndPopup);
+    endInfo.innerHTML = '<h2>Hoodie</h2></br><p><strong>Size: </strong>' + OurBuyersData[0].sizes + '</p></br><p><strong>Color: </strong>' + OurBuyersData[0].colors + '</p></br><p><strong>Total price: </strong>'/*  + totalPrice + '</p>' */;
+
+    //Client and shipping info
+    let clientInfo = document.createElement('div');
+    clientInfo.id = 'clientInfo';
+    let completeName = client.firstName + ' ' + client.lastName;
+    let completeAddress = client.address1 + ' ' + client.address2 + ' ';
+    clientInfo.innerHTML = '<p><strong>Name: </strong>' + '</p></br><p><strong>Address:</strong></br>' + completeAddress + '</p></br><p> ' + client.postalCode + ', ' + client.country + '</p></br><p><strong>Shipping: </strong>' + client.shipping + '</p></br><p><strong>Estimated delivery: </strong>' + client.shippingEstimate + '</p>';
+
+    //Button
+    let restart = document.createElement('button');
+    restart.id = 'restart';
+    restart.innerHTML = 'FINISH';
+
+    //Appending all the elements
+    endProduct.appendChild(endImg);
+    endProduct.appendChild(endInfo);
+    endPopup.appendChild(endProduct);
+    endPopup.appendChild(clientInfo);
+    endPopup.appendChild(restart);
+    document.querySelector('body').appendChild(endPopup);
+    document.querySelector('#endProduct div:first-child').style.backgroundImage = imgUrl;
 }
 
 
@@ -76,7 +100,7 @@ function minuteAlerts() {
         let endTime = new Date();
         let totalMls = endTime - startTime;
         let totalTime = timeCalculus(totalMls);
-
+        endPopup();
         finished = true;
         return finished;
     });
@@ -124,4 +148,4 @@ function minuteAlerts() {
     },60000); //60000
 }
 
-document.querySelectorAll('.next')[0].addEventListener('click', minuteAlerts);
+document.querySelector('.button-buy').addEventListener('click', minuteAlerts);

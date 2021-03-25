@@ -625,21 +625,45 @@ legend{
     display: flex;
     top: 50%;
     left: 50%;
-    width: 500px;
-    height: 150px;
-    margin-top: -150px;
-    margin-left: -250px;
+    width: 800px;
+    height: 90vh;
+    margin-top: -45vh;
+    margin-left: -400px;
     background-color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 40px;
     font-weight: bold;
     line-height: 1.5;
     z-index: 3;
     border-radius: 10px;
+    flex-wrap: wrap;
+    
+}
+
+#endProduct {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: flex-start;
 }
 
 #endProduct div:first-child {
-    width: 20%;
-    background-repeat: none;
-    background-size: cover;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#endProduct div:last-child {
+    width: 60%;
+}
+
+#clientInfo {
+    width: 45%;
+    margin-top: 25px;
+    justify-self: flex-start;
+}
+
+#restart {
+    width: 45%;
+    height: 40px;
+    align-self: center;
 }
