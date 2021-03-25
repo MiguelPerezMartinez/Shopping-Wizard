@@ -1,15 +1,3 @@
-// declaracion del eventListener
-
-let $miniaturas = document.querySelectorAll(".miniaturas");
-
-$miniaturas.forEach((miniatura) => {
-  miniatura.addEventListener("click",changes);
-})
-
-function changes(event){
-  console.log(event);
-}
-
 // función para cambiar las imagenes (diferentes colores) en la imagen central
 
 function change(num){
@@ -56,23 +44,6 @@ class Buyers{
     }
 }
 
-// recorremos el array y los mostramos en un <p> PARA VER SI ALMACENA LOS DATOS O NO 
-
-function updateBuyers(){
-  totalData.innerHTML = "";
-
-  // foor loop para recorrer los buyers y verlo en el index
-
-  for (let i = 0; i < OurBuyersData.length; i++){
-      totalData.innerHTML = totalData.innerHTML + '<div>' + 
-      '<p>' + OurBuyersData[i].price + '</p>' +
-      '<p>' + OurBuyersData[i].colors + '</p>' +
-      '</p>' + OurBuyersData[i].hoodie + '</p>' +
-      '</p>' + OurBuyersData[i].sizes + '</p>' +
-      '</div>';
-  } 
-}
-
 
 // creamos una funcion para nuestro usuario (comprador)
 
@@ -86,9 +57,11 @@ function createBuyer(){
 
     var buyer = new Buyers(price, colors, hoodie, sizes);
     OurBuyersData.push(buyer);  // lo añadimos a nuestra variable de datos []
-    
+
+    console.log(buyer);
+
     updateBuyers();
-     
+
 }
 
 

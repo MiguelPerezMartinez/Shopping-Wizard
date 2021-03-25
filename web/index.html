@@ -47,12 +47,15 @@
                     <div class="left">
                         <img src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" onclick="changeLeft(0)" data-price="19,99€"  width="100%" alt="Crema" border="0" style="cursor: pointer;">
                         <img src="https://i.ibb.co/StD3PQx/hmgoepprod-Blanca2.jpg" onclick="changeLeft(1)" data-price="19,99€" width="100%" alt="Crema" border="0" style="cursor: pointer;"> 
-                       
                     </div>
                     <div class="center touch-auto">
                         <img id="imageMain" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" alt="Crema" border="0">
                     </div>
-                    <div class="right">
+                </main>
+                <aside>
+                    <fieldset>
+                        <legend><h2>Next step</h2></legend>
+
                         <h2 class="tittle">Sudadera con capucha</h2>
                         <h2 id="price">19,99 €</h2>
                         <p id="colors">Crema</p>
@@ -75,23 +78,18 @@
                                 <option value="xl" >&nbsp;&nbsp;XL</option>
                             </select>
                         </form>
-                    
-                        <div class="button-buy">
-                            <a href="#two" onclick="createBuyer()">AÑADIR</a>
-                        </div>
-                   
 
-                     
                         <p class="membership">Hazte miembro hoy y consigue -15% en tu compra</p>
 
-                        <!--display donde mostrar los productos-->
+                        <div class="buttons">
+                            </a><button id="profileBttn" class="next" onclick="createBuyer()"><a href="#two">BUY</a></button>
+                        </div>
                         <div id="displayListBuyers"></div>
-                    </div>
-                </main>
-                <footer>
-
-                </footer>
-
+                    </fieldset>
+                    <fieldset>
+                        <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
+                    </fieldset>
+                </aside>
             </section>
 
 
@@ -132,9 +130,6 @@
 
                         </fieldset>
                     </aside>
-                    <div class="footer">
-                        
-                    </div class="footer">
                 </form>
             </section>
 
@@ -316,7 +311,7 @@
                             </section>
                         </div>
                         <div id="terms">
-                            <p><input type="checkbox" required>I have read and I accept the terms and conditions.</p>
+                            <p><input class="validable" type="checkbox" id="conditions" required> -- I have read and I accept the terms and conditions.</p>
                         </div>
                     </fieldset>
                 </main>
@@ -328,7 +323,7 @@
                             <ul id="finish-info">
                             </ul>
                         </div>
-                        <button id="finishBttn"><a href="#">FINISH</a></button>
+                        <button id="finishBttn"><a href="#">Buy now</a></button>
                     </fieldset>
                     <fieldset>
                         <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
@@ -338,17 +333,11 @@
 
                     </fieldset>
                 </aside>
-
-                <footer>
-
-                </footer>
             </section>
         </section>
-    <script src="app.js"></script>
-    <script src="validation.js"></script>
-    <script src="product.js"></script>
-
-
-    <script src="info.js"></script>
+        <script src="app.js"></script>
+        <script src="validation.js"></script>
+        <script src="product.js"></script>
+        <script src="info.js"></script>
     </body>
 </html>

@@ -6,7 +6,7 @@ $inputs = document.querySelectorAll(".validable");
 $inputs.forEach((input) => {
   input.setAttribute("autocomplete","off");
   input.addEventListener('focusout',printInfo);
-  input.addEventListener('clic',printInfo);
+  input.addEventListener('click',printInfo);
 });
 
 $shipping_type = document.querySelectorAll(".shipping-time");
@@ -17,11 +17,16 @@ $shipping_type.forEach((type) => {
 $gift = document.querySelector("#gift");
 $gift.addEventListener('click',printInfo);
 
+$gift = document.querySelector("#conditions");
+$gift.addEventListener('click',printInfo);
+
 
 //PRINT CLIENT INFO
 
 function printInfo(){
+
   var li = document.createElement("li");
+
   //PROFILE
   $profile_list.innerHTML = '<li>Username: ' + client.username + '</li>';
   $profile_list.innerHTML += '<li>Email: ' + client.email + '</li>';
@@ -42,6 +47,10 @@ function printInfo(){
   $shipping_list.innerHTML += '<li>Gift message: ' + client.gift + "<br>" + client.gMessage + '</li>';
 
   //FINISH
-  $finish_list.innerHTML = '<li>Hoodie :'/* + product.name + ' ' + product.price + */+'</li>';
-  $finish_list.innerHTML += '<li>' + client.shipping + ': ' + client.shippingPrice;
+  $finish_list.innerHTML = '<li>Hoodie : ' + OurBuyersData[0].price + '</li>';
+  $finish_list.innerHTML += '<li>' + client.shipping + ': ' + client.shippingPrice + '</li>';
+  client.productPrice = 10;
+  client.finishPrice = function(){return this.shippingPrice + this.productPrice};
+  console.log(client.finishPrice)
+  $finish_list.innerHTML += '<li>Total price: ' + client.finishPrice + '</li>';
 }
