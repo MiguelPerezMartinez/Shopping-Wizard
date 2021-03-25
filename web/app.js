@@ -190,7 +190,7 @@ function minuteAlerts() {
                 timerArr[x].classList.toggle('off');
                 setTimeout(() => {
                     timerArr[x].classList.toggle('off');
-                }, 5000);
+                }, 60000);
             }
 
         //Creates a popup to block the site and returns to the main page
