@@ -54,3 +54,4 @@ function printInfo(){
   console.log(client.finishPrice)
   $finish_list.innerHTML += '<li>Total price: ' + client.finishPrice + '</li>';
 }
+
