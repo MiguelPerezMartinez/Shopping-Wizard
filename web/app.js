@@ -53,23 +53,33 @@ function resetClient() {
     document.querySelector("#product-info").innerHTML = "";
     document.querySelector("#finish-info").innerHTML = "";
 
-    //Removing all content from the input fields
+    //Removing all content and color from the input fields
     let phoneCoun = document.getElementById('phone-prefix');
-    let country = document.getElementById('country')
+    let country = document.getElementById('country');
     $inputs.forEach((input) => {
         if (input == phoneCoun) {
             input.value = 'AND-376';
+            input.style.backgroundColor = 'rgb(255, 255, 255)';
         } else if (input == country) {
             input.value = 'Andorra';
-        }else if (input == 'free-shipping' || input == 'extra-shipping' || input == 'premium-shipping') {
-            let radioOptions = document.querySelectorAll('.shipping-time');
-            radioOptions.forEach((option) => {
-                option.checked = false;
-            });
         } else {
         input.value = "";
+        input.style.backgroundColor = 'rgb(255, 255, 255)';
         }
     });
+
+    //Removing the selected checkboxes and radio buttons
+    let checksArr = ["regular-address", "free-shipping", "extra-shipping", "premium-shipping", "gift", "conditions"];
+    checksArr.forEach((id) => {
+        document.getElementById(id).checked = false;
+    });
+
+    //Removing the estimate shipping date div
+    let arrival = document.querySelector("#shipping-date");
+    arrival.style.display = "none";
+
+    //Hidding the gift menu
+    document.querySelector(".gift-message").style.display = "none";
 
     //Getting the size selector to default
     document.getElementById("sizes").value = "size";
@@ -206,7 +216,7 @@ function minuteAlerts() {
         } else if (finished == true) {
             clearInterval(t);
         }
-    },60000); //60000
+    },6000); //60000
 }
 
 document.getElementById('productBttn').addEventListener('click', minuteAlerts);
