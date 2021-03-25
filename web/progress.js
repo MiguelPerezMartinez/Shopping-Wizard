@@ -22,24 +22,34 @@ const progressContainer = document.getElementById('progress-bar-container')
 purchaseBtn.addEventListener('click', function()   {
     progressContainer.style.visibility = 'visible';
     progressBar.style.width = '0%';
+    window.location.replace("/web/index.html#two");
 })
 
 nextBtn1.onclick = function()   {
-    progressContainer.style.visibility = 'visible';
-    progressBar.style.width = '34%';
-    circleTwo.style.backgroundColor = '#A69D94';
+    if(window.location.hash == "#two"){
+        progressContainer.style.visibility = 'visible';
+        progressBar.style.width = '34%';
+        circleTwo.style.backgroundColor = '#A69D94';
+        window.location.replace("/web/index.html#three");
+    }
 }
 
 nextBtn2.onclick = function()   {
-    progressContainer.style.visibility = 'visible';
-    progressBar.style.width = '66%';
-    circleThree.style.backgroundColor = '#A69D94';
+    if(window.location.hash == "#four"){
+        progressContainer.style.visibility = 'visible';
+        progressBar.style.width = '66%';
+        circleThree.style.backgroundColor = '#A69D94';
+        window.location.replace("/web/index.html#four");
+    }
 }
 
 nextBtn3.onclick = function()   {
-    progressContainer.style.visibility = 'visible';
-    progressBar.style.width = '99%';
-    circleFour.style.backgroundColor = '#A69D94';
+    if(window.location.hash == "#five"){
+        progressContainer.style.visibility = 'visible';
+        progressBar.style.width = '99%';
+        circleFour.style.backgroundColor = '#A69D94';
+        window.location.replace("/web/index.html#five");
+    }
 }
 
 nextBtn4.onclick = function()   {
