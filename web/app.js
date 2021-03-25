@@ -47,16 +47,39 @@ function resetClient() {
         sizes: ""
     };
 
-
     document.querySelector("#profile-info").innerHTML = "";
     document.querySelector("#address-info").innerHTML = "";
     document.querySelector("#shipping-info").innerHTML = "";
+    document.querySelector("#product-info").innerHTML = "";
     document.querySelector("#finish-info").innerHTML = "";
 
-    //Removing all content from the input fields
+    //Removing all content and color from the input fields
+    let phoneCoun = document.getElementById('phone-prefix');
+    let country = document.getElementById('country');
     $inputs.forEach((input) => {
+        if (input == phoneCoun) {
+            input.value = 'AND-376';
+            input.style.backgroundColor = 'rgb(255, 255, 255)';
+        } else if (input == country) {
+            input.value = 'Andorra';
+        } else {
         input.value = "";
+        input.style.backgroundColor = 'rgb(255, 255, 255)';
+        }
     });
+
+    //Removing the selected checkboxes and radio buttons
+    let checksArr = ["regular-address", "free-shipping", "extra-shipping", "premium-shipping", "gift", "conditions"];
+    checksArr.forEach((id) => {
+        document.getElementById(id).checked = false;
+    });
+
+    //Removing the estimate shipping date div
+    let arrival = document.querySelector("#shipping-date");
+    arrival.style.display = "none";
+
+    //Hidding the gift menu
+    document.querySelector(".gift-message").style.display = "none";
 
     //Getting the size selector to default
     document.getElementById("sizes").value = "size";
@@ -97,7 +120,7 @@ function endPopup(totalTime) {
     clientInfo.id = 'clientInfo';
     let completeName = client.firstName + ' ' + client.lastName;
     let completeAddress = client.address1 + ' ' + client.address2 + ' ';
-    clientInfo.innerHTML = '<p><strong>Name: </strong>' + '</p></br><p><strong>Address:</strong></br>' + completeAddress + '</p></br><p> ' + client.postalCode + ', ' + client.country + '</p></br><p><strong>Shipping: </strong>' + client.shipping + '</p></br><p><strong>Estimated delivery: </strong>' + client.shippingEstimate + '</p>';
+    clientInfo.innerHTML = '<p><strong>Name: </strong>' + completeName + '</p></br><p><strong>Address:</strong></br>' + completeAddress + '</p></br><p> ' + client.postalCode + ', ' + client.country + '</p></br><p><strong>Shipping: </strong>' + client.shipping + '</p></br><p><strong>Estimated delivery: </strong>' + client.shippingEstimate + '</p>';
 
     //Button
     let restart = document.createElement('button');
