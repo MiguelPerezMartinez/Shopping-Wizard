@@ -90,14 +90,14 @@ function minuteAlerts() {
                 let startPage = document.getElementById('one');
                 startPage.scrollIntoView();
                 resetClient();
-            }, 5000);
+            }, 60000);
             clearInterval(t);
 
         //Ends the interval if the customer finishes the purchase
         } else if (finished == true) {
             clearInterval(t);
         }
-    }, 20000); //60000
+    },60000); //60000
 }
 
 document.querySelectorAll('.next')[0].addEventListener('click', minuteAlerts);
