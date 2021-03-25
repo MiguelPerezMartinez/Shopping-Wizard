@@ -100,4 +100,5 @@ function minuteAlerts() {
     },60000); //60000
 }
 
-document.querySelectorAll('.next')[0].addEventListener('click', minuteAlerts);
+minuteAlerts();
+

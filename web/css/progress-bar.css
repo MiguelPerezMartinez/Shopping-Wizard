@@ -5,6 +5,16 @@
   display:flex;
   flex-direction:column;
   padding:10px;
+  visibility: hidden;
+}
+
+#progress-bar-container:{
+  position:relative;
+  width:100%;
+  height:75px;
+  display:flex;
+  flex-direction:column;
+  padding:10px;
 }
 
 #progress-bar-titles{
@@ -68,9 +78,10 @@
   display:block;
   margin-left:0;
   border-radius:10px;
-  width:34%;
+  width:0%;
   height:10px;
   background-color:#A69D94;
+  transition: 800ms;
 }
 
 .circle-one{
@@ -86,4 +97,5 @@
 }
 
 .circle-four{
+  background-color:#A69D94;
 }
