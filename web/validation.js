@@ -19,6 +19,7 @@ $gift.setAttribute("autocomplete","off");
 $gift.addEventListener('click',giftChecked);
 
 
+
 //CLIENT OBJECT
 
 let client = {
@@ -40,7 +41,8 @@ let client = {
   shippingPrice: "",
   gift: "",
   gMessage: "",
-  gImage: ""
+  gImage: "",
+  terms: ""
 };
 
 
@@ -49,6 +51,10 @@ let client = {
 function validation(event){
   let target = event.target;
   let valid = false;
+
+  //check if is condition terms is false
+  validConditions(target)
+
   switch(event.target.id){
     case "username":
       valid = validUsername(event,target);
@@ -104,7 +110,7 @@ function validation(event){
     case "regular-address":
       //TODO: Pendiente de que al guardar en el objeto sea true o false. Se queda siempre en On.
       valid = true;
-      if (valid == true){client.regularAddress = event.target.value;};
+      if (valid == true){client.regularAddress = event.target.checked;};
       break;
     case "gift-title":
       valid = validGiftTitle(target);
@@ -113,6 +119,10 @@ function validation(event){
     case "gift-message":
       valid = validGiftMessage(target);
       if (valid == true){client.gMessage = event.target.value;};
+      break;
+    case "conditions":
+      valid = validConditions(target);
+      if (valid == true){client.terms = valid;};
       break;
     default:
       console.log("default");
@@ -175,10 +185,19 @@ function validGiftMessage(target){
   return (target.value.length >= 5 && target.value.length <= 100);
 }
 
+function validConditions(target){
+  if(target.checked == true){
+    document.querySelector('#terms').style.backgroundColor = "rgb(166, 253, 192)";
+    document.querySelector('#finishBttn').style.display = 'block';
+  }else{
+    document.querySelector('#terms').style.backgroundColor = "rgb(253, 166, 166)";
+    document.querySelector('#finishBttn').style.display = 'none';
+  }
+}
+
 //SHIPPING SELECTION
 
 function shippingCheck(event){
-  console.log("shipping check");
   let arrival = document.querySelector("#shipping-date");
   arrival.style.display = "block";
 
@@ -203,7 +222,6 @@ function shippingCheck(event){
   document.getElementById("shipping-estimate").innerHTML = shipping_date.toLocaleDateString();
   client.shipping = event.target.value;
   client.shippingEstimate = shipping_date.toLocaleDateString();
-  console.log(client);
 }
 
 
@@ -212,8 +230,10 @@ function shippingCheck(event){
 function giftChecked(event){
   if(event.target.checked == true){
     document.querySelector(".gift-message").style.display = "block";
+    return true;
   }else{
     document.querySelector(".gift-message").style.display = "none";
+    return false;
   };
 }
 

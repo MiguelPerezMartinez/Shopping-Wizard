@@ -617,5 +617,16 @@ legend{
 
 #terms {
     width: 100%;
+    height:50px;
+    padding:15px;
     display: flex;
+    text-align:center;
+}
+
+#terms input{
+    transform:scale(1.5);
+}
+
+#finishBttn{
+    display:none;
 }

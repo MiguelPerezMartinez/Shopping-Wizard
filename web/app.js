@@ -46,16 +46,16 @@ function minuteAlerts() {
     let finished = false;
 
     //Event listener that ends the purchase and shows the total time spent
-    document.getElementById('finishBttn').addEventListener('click', () =>{
-        let endTime = new Date();
-        let totalMls = endTime - startTime;
-        let totalTime = timeCalculus(totalMls);
-        document.querySelector('#five .timer').classList = 'timer';
-        document.querySelector('#five .timer').innerHTML = '<legend><h2>Total time</h2></legend>'
-        document.querySelector('#five .timer').innerHTML += 'Your purchase took: ' + totalTime;
-        finished = true;
-        return finished;
-    });
+    // document.getElementById('finishBttn').addEventListener('click', () =>{
+    //     let endTime = new Date();
+    //     let totalMls = endTime - startTime;
+    //     let totalTime = timeCalculus(totalMls);
+    //     document.querySelector('#five .timer').classList = 'timer';
+    //     document.querySelector('#five .timer').innerHTML = '<legend><h2>Total time</h2></legend>'
+    //     document.querySelector('#five .timer').innerHTML += 'Your purchase took: ' + totalTime;
+    //     finished = true;
+    //     return finished;
+    // });
 
     let counter = 0;
     let timerArr = document.querySelectorAll('.timer');
