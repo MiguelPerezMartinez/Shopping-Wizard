@@ -15,7 +15,7 @@
 
     <body>
         <header>
-            <a href="index.html"><img src="/web/img/logo_200x200.png" width="10%" alt="logo de la marca"></a>
+            <a href="index.html"><img src="/web/img/logo_200x200.png" width="10%" alt="brand logo"></a>
 
             <!-- PROGRESS BAR -->
             <div id="progress-bar-container">
@@ -45,41 +45,40 @@
             <section class="slide" id="one">
                 <main>
                     <div class="left">
-                        <img src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" onclick="changeLeft(0)" data-price="19,99€"  width="100%" alt="Crema" border="0" style="cursor: pointer;">
-                        <img src="https://i.ibb.co/StD3PQx/hmgoepprod-Blanca2.jpg" onclick="changeLeft(1)" data-price="19,99€" width="100%" alt="Crema" border="0" style="cursor: pointer;"> 
+                        <img src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" onclick="changeLeft(0)" data-price="19,99€"  width="100%" alt="Cream" border="0" style="cursor: pointer;">
+                        <img src="https://i.ibb.co/StD3PQx/hmgoepprod-Blanca2.jpg" onclick="changeLeft(1)" data-price="19,99€" width="100%" alt="Cream" border="0" style="cursor: pointer;"> 
                     </div>
                     <div class="center touch-auto">
-                        <img id="imageMain" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" alt="Crema" border="0">
+                        <img id="imageMain" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" alt="Cream" border="0">
                     </div>
                 </main>
                 <aside>
                     <fieldset>
                         <legend><h2>Next step</h2></legend>
 
-                        <h2 class="tittle">Sudadera con capucha</h2>
+                        <h2 class="tittle">Hoodie</h2>
                         <h2 id="price">19,99 €</h2>
-                        <p id="colors">Crema</p>
+                        <p id="colors">Cream</p>
                         <div id="hoodie" class="clothes-color">
-                            <img class="miniaturas" onclick="change(0)" id="imageBlanca" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" width="20%" alt="Crema" style="cursor: pointer;" data-price="19,99€" data-option="https://i.ibb.co/StD3PQx/hmgoepprod-Blanca2.jpg">
-                            <img class="miniaturas" onclick="change(1)" id="imageAzul" src="https://i.ibb.co/Yy6Rcg9/hmgoepprod-Azul.jpg"  width="20%" alt="Azul" border="0" style="cursor: pointer;" data-price="22,95€" data-option="https://i.ibb.co/6chkyhm/hmgoepprod-Azul2.jpg">
+                            <img class="miniaturas" onclick="change(0)" id="imageBlanca" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" width="20%" alt="Cream" style="cursor: pointer;" data-price="19,99€" data-option="https://i.ibb.co/StD3PQx/hmgoepprod-Blanca2.jpg">
+                            <img class="miniaturas" onclick="change(1)" id="imageAzul" src="https://i.ibb.co/Yy6Rcg9/hmgoepprod-Azul.jpg"  width="20%" alt="Blue" border="0" style="cursor: pointer;" data-price="22,95€" data-option="https://i.ibb.co/6chkyhm/hmgoepprod-Azul2.jpg">
                             <img class="miniaturas" onclick="change(2)" id="imageBeige" src="https://i.ibb.co/m0ygyvW/hmgoepprod-Beige.jpg" width="20%" alt="Beige" border="0" style="cursor: pointer;" data-price="24,99€" data-option="https://i.ibb.co/yyK8x3x/hmgoepprod-Beige2.jpg">
-                            <img class="miniaturas" onclick="change(3)" id="imageMarron" src="https://i.ibb.co/bQsV0Jc/hmgoepprod-Marron.jpg"  width="20%" alt="Marron" border="0" style="cursor: pointer;" data-price="26,95€" data-option="https://i.ibb.co/NCzPQH9/hmgoepprod-Marron2.jpg">
-                            <img class="miniaturas" onclick="change(4)" id="imageRojo" src="https://i.ibb.co/BK8XNBw/hmgoepprod-Rojo.jpg"  width="20%" alt="Rojo" border="0" style="cursor: pointer;" data-price="28,95€" data-option="https://i.ibb.co/svGjYmH/hmgoepprod-Rojo2.jpg">
+                            <img class="miniaturas" onclick="change(3)" id="imageMarron" src="https://i.ibb.co/bQsV0Jc/hmgoepprod-Marron.jpg"  width="20%" alt="Brown" border="0" style="cursor: pointer;" data-price="26,95€" data-option="https://i.ibb.co/NCzPQH9/hmgoepprod-Marron2.jpg">
+                            <img class="miniaturas" onclick="change(4)" id="imageRojo" src="https://i.ibb.co/BK8XNBw/hmgoepprod-Rojo.jpg"  width="20%" alt="Red" border="0" style="cursor: pointer;" data-price="28,95€" data-option="https://i.ibb.co/svGjYmH/hmgoepprod-Rojo2.jpg">
                             <img class="miniaturas" onclick="change(5)" id="imageVerde" src="https://i.ibb.co/Y7Rnmwh/hmgoepprod-Verde.jpg"  width="20%" alt="Verde" border="0" style="cursor: pointer;" data-price="32,95€" data-option="https://i.ibb.co/0JzCCPQ/hmgoepprod-Verde2.jpg"> 
                         </div>
                         <h4 class="atributo">Size:</h4>
                         <form action="">
                             <select name="sizes" id="sizes"> <!--onchange()-->
-                                <option value="size" >&nbsp;&nbsp;Seleccionar talla</option>
-                                <option value="xs" >&nbsp;&nbsp;XS</option>
-                                <option value="s" >&nbsp;&nbsp;S</option>
-                                <option value="m" >&nbsp;&nbsp;M</option>
-                                <option value="l" >&nbsp;&nbsp;L</option>
-                                <option value="xl" >&nbsp;&nbsp;XL</option>
+                                <option value="size" >&nbsp;&nbsp;Select size</option>
+                                <option value="XS" >&nbsp;&nbsp;XS</option>
+                                <option value="S" >&nbsp;&nbsp;S</option>
+                                <option value="M" >&nbsp;&nbsp;M</option>
+                                <option value="L" >&nbsp;&nbsp;L</option>
+                                <option value="XL" >&nbsp;&nbsp;XL</option>
                             </select>
                         </form>
-
-                        <p class="membership">Hazte miembro hoy y consigue -15% en tu compra</p>
+                        <p class="membership">Sign up to our membership and get <b>15% off</b> your first purchase!</p>
 
                         <div class="buttons">
                             </a><button id="productBttn" class="next" onclick="createBuyer()"><a href="#two">BUY</a></button>
@@ -99,7 +98,7 @@
                     <main>
                         <fieldset>
                             <legend><h2>Profile</h2></legend>
-                            <form>
+                            <form action="#three" id="formProfile">
                             <label for="username">Username</label>
                             <input autocomplete="" type="text" id="username" class="validable" placeholder="Enter a username" maxlength="20" required />
                             <label for="email">Email</label>
@@ -119,7 +118,8 @@
                             </div>
                             <div class="buttons">
                                 <button type="reset" class="reset two-buttons">Reset form</button>
-                                <button id="profileBttn" class="next two-buttons"><a href="#three">Next</a></button>
+                                <button id="profileBttn" class="next two-buttons" type="submit" form="formProfile">Next</button>
+                                <!-- <a href="#three">Next</a> -->
                             </div>
                         </fieldset>
                         <fieldset>
@@ -140,7 +140,7 @@
                     <main>
                         <fieldset>
                         <legend><h2>Address:</h2></legend>
-                        <form>
+                        <form action="#four" id="formAddress">
                             <div class="uno">
                                 <div>
                                     <p>First Name</p>
@@ -172,10 +172,10 @@
                                     <p>Country</p>
                                     <select id="country" class="validable" name="add_country">
                                         <option value="Andorra">Andorra</option>
-                                        <option value="España">España</option>
-                                        <option value="Francia">Francia</option>
-                                        <option value="Alemania">Alemania</option>
-                                        <option value="Grecia">Grecia</option>
+                                        <option value="Spain">Spain</option>
+                                        <option value="France">France</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="Greece">Greece</option>
                                     </select>
                                 </div>
                                 <div>
@@ -207,7 +207,7 @@
                             </div>
                             <div class="buttons">
                                 <button type="reset" class="reset two-buttons">Reset form</button>
-                                <button id="addressBttn" class="next"><a href="#four">Next</a></button>
+                                <button id="addressBttn" class="next" type="submit" form="formAddress">Next</button>
                             </div>
                         </fieldset>
                         <fieldset>
@@ -229,7 +229,7 @@
                         <fieldset>
                             <legend><h2>Shipping</h2></legend>
                             <h4>Shipping type:</h4>
-                            <form>
+                            <form action="#five" id="formShipping">
                             <div>
                                 <input type="radio" id="free-shipping" class="shipping-time" name="shipping-time" value="Free Shipping" data-price="0">
                                 <label for="free">Free Shipping</label>
@@ -277,7 +277,7 @@
                             </div>
                             <div class="buttons">
                                 <button class="reset two-buttons">Reset form</button>
-                                <button id="shippingBttn"><a href="#five">Next</a></button>
+                                <button id="shippingBttn" type="submit" form="formShipping">Next</button>
                             </div>
                         </fieldset>
                         <fieldset>
@@ -298,16 +298,13 @@
                 <main>
                     <fieldset>
                         <legend><h2>Your purchase</h2></legend>
-                        <div class="two-cols">
-                            <img class="two-cols" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F21%2F4d%2F214d9765f510970fa8e5b082f120c76503fab1ca.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_hoodiessweatshirts_hoodies%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
+                        <div class="two-cols" id="itemShow">
+                            <img src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" onclick="changeFinish(0)" width="100%" border="0" style="cursor: pointer;">
                         </div>
                         <div class="two-cols">
                             <section class="two-cols" id="itemDescription">
-                                <h2>Product name</h2>
-                                <p>Size: <span></span></p>
-                                <p>Color: <span></span></p>
-                                <p>Estimated delivery date:</p>
-                                <P>Between...</P>
+                                <ul id="product-info">
+                                </ul>
                             </section>
                         </div>
                         <div id="terms">
@@ -339,5 +336,6 @@
         <script src="validation.js"></script>
         <script src="product.js"></script>
         <script src="info.js"></script>
+        <script src="progress.js"></script>
     </body>
 </html>
