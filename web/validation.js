@@ -65,7 +65,7 @@ function validation(event){
       if (valid == true){client.email = event.target.value;};
       break;
     case "password":
-      valid = validPassword(target);
+      valid = validPassword(target); 
       break;
     case "confirm-password":
       valid = validConfirmPassword(target);
@@ -147,7 +147,9 @@ function validEmail(target){
 }
 
 function validPassword(target){
-  let pattern = /^[a-zA-Z0-9_*!¡"·$%&/()=?¿+-]+$/;
+  //let pattern = /^[a-zA-Z0-9_*!¡"·$%&/()=?¿+-]+$/;
+  let pattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]).{8,}/;
+
   return (pattern.test(target.value) && target.value.length >= 8 && target.value.length <= 20);
 }
 
