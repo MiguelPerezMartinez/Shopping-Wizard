@@ -8,15 +8,6 @@
   visibility: hidden;
 }
 
-#progress-bar-container:{
-  position:relative;
-  width:100%;
-  height:75px;
-  display:flex;
-  flex-direction:column;
-  padding:10px;
-}
-
 #progress-bar-titles{
   width:100%;
 }

@@ -1,4 +1,4 @@
-const purchaseBtn = document.getElementById('buy-button');
+const purchaseBtn = document.getElementById('productBttn');
 
 const nextBtn1 = document.getElementById('profileBttn');
 const nextBtn2 = document.getElementById('addressBttn');
@@ -19,7 +19,7 @@ const progressContainer = document.getElementById('progress-bar-container')
 // Button and progress bar interaction
 
 purchaseBtn.onclick = function()   {
-    progressContainer.style.visibility = 'visible';
+    progressContainer.style.display = 'visible';
     progressBar.style.width = '0%';
 }
 
