@@ -1,3 +1,5 @@
+
+
 $profile_list = document.querySelector("#profile-info");
 $address_list = document.querySelector("#address-info");
 $shipping_list = document.querySelector("#shipping-info");
@@ -7,6 +9,8 @@ $inputs.forEach((input) => {
   input.addEventListener('focusout',printInfo);
   input.addEventListener('clic',printInfo);
 });
+
+
 
 function printInfo(){
   var li = document.createElement("li");
@@ -25,3 +29,5 @@ function printInfo(){
   $shipping_list.innerHTML = '<li>Shipping type: ' + client.shipping + '</li>';
   $shipping_list.innerHTML += '<li>Last name: ' + client.lastName + '</li>';
 }
+
+

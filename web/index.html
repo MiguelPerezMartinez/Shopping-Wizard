@@ -66,11 +66,11 @@
                         <form action="">
                             <select name="sizes" id="sizes"> <!--onchange()-->
                                 <option value="size" >&nbsp;&nbsp;Seleccionar talla</option>
-                                <option value="xs" >&nbsp;&nbsp;XS</option>
-                                <option value="s" >&nbsp;&nbsp;S</option>
-                                <option value="m" >&nbsp;&nbsp;M</option>
-                                <option value="l" >&nbsp;&nbsp;L</option>
-                                <option value="xl" >&nbsp;&nbsp;XL</option>
+                                <option value="XS" >&nbsp;&nbsp;XS</option>
+                                <option value="S" >&nbsp;&nbsp;S</option>
+                                <option value="M" >&nbsp;&nbsp;M</option>
+                                <option value="L" >&nbsp;&nbsp;L</option>
+                                <option value="XL" >&nbsp;&nbsp;XL</option>
                             </select>
                         </form>
                     
@@ -82,8 +82,8 @@
                      
                         <p class="membership">Hazte miembro hoy y consigue -15% en tu compra</p>
 
-                        <!--display donde mostrar los productos-->
-                        <div id="displayListBuyers"></div>
+                        <!--display donde mostrar los productos
+                        <div id="displayListBuyers"></div>-->
                     </div>
                 </main>
                 <footer>
@@ -293,16 +293,21 @@
                 <main>
                     <fieldset>
                         <legend><h2>Your purchase</h2></legend>
-                        <div class="two-cols">
-                            <img class="two-cols" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F21%2F4d%2F214d9765f510970fa8e5b082f120c76503fab1ca.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_hoodiessweatshirts_hoodies%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
+                        <div class="two-cols" id="itemShow">
+                            <img src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" onclick="changeFinish(0)" width="100%" border="0" style="cursor: pointer;">
                         </div>
                         <div class="two-cols">
                             <section class="two-cols" id="itemDescription">
+                                <ul id="product-info">
+                                </ul>
+                                <!--
                                 <h2>Product name</h2>
+                                <p>Price</p>
                                 <p>Size: <span></span></p>
                                 <p>Color: <span></span></p>
                                 <p>Estimated delivery date:</p>
                                 <P>Between...</P>
+                                -->
                             </section>
                         </div>
                         <div id="terms">

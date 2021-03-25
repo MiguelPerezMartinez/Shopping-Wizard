@@ -575,6 +575,7 @@ legend{
 #itemDescription{
     display:flex;
     flex-direction:column;
+    list-style: none;
 }
 
 #terms {
