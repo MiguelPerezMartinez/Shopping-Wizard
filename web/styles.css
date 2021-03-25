@@ -97,6 +97,16 @@ aside *{
     border:0px;
 }
 
+#resetProfile,
+#profileBttn,
+#resetAddress,
+#addressBttn,
+#resetShipping,
+#shippingBttn {
+    padding: 20px 30px;
+}
+
+
 button{
     background-color:#A69D94;
     text-decoration:none;

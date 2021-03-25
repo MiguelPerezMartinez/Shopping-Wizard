@@ -65,7 +65,7 @@ function validation(event){
       if (valid == true){client.email = event.target.value;};
       break;
     case "password":
-      valid = validPassword(target);
+      valid = validPassword(target); 
       break;
     case "confirm-password":
       valid = validConfirmPassword(target);
