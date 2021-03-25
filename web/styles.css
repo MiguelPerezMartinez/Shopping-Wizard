@@ -251,6 +251,7 @@ legend{
     position:absolute;
     top:5%;
     left:10%;
+    z-index: 2;
 }
 
 .left div{
@@ -279,10 +280,25 @@ legend{
     width:100%;
     margin:2%;
     height:100%;
-    background-image:url("img/hmgoepprodBlanca.jpeg");
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
+    overflow: hidden; 
+}
+
+.center img{
+    max-width: 100%;
+    transition: all 0.7s ease;
+}
+
+.center img:hover{
+    transform: scale(1.5);
+    transition: all 0.7s ease; 
+}
+
+.touch-auto{
+    touch-action: auto;
+    overflow: scroll;
 }
 
 .atributo{

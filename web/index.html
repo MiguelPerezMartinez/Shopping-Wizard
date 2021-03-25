@@ -9,14 +9,6 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="validation.css">
         <title>Shopping Wizard</title>
-        <script src="/web/app.js" type="text/javascript"></script>
-        <script type="text/javascript">
-
-
-
-          
-
-        </script>
     </head>
 
     <body>
@@ -51,27 +43,28 @@
             <section class="slide" id="one">
                 <main>
                     <div class="left">
-                        <img src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg"  width="100%" alt="" border="0" style="cursor: pointer;">
-                        <img src="https://i.ibb.co/StD3PQx/hmgoepprod-Blanca2.jpg" width="100%" alt="" border="0" style="cursor: pointer;"> 
+                        <img src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" onclick="changeLeft(0)" data-price="19,99€"  width="100%" alt="Crema" border="0" style="cursor: pointer;">
+                        <img src="https://i.ibb.co/StD3PQx/hmgoepprod-Blanca2.jpg" onclick="changeLeft(1)" data-price="19,99€" width="100%" alt="Crema" border="0" style="cursor: pointer;"> 
+                       
                     </div>
-                    <div class="center">
+                    <div class="center touch-auto">
                         <img id="imageMain" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" alt="Crema" border="0">
                     </div>
                     <div class="right">
                         <h2 class="tittle">Sudadera con capucha</h2>
-                        <h2 id="price" alt="">19,99 €</h2>
+                        <h2 id="price">19,99 €</h2>
                         <p id="colors">Crema</p>
                         <div id="hoodie" class="clothes-color">
-                            <img class="miniaturas" id="imageBlanca" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" width="20%" alt="Crema" style="cursor: pointer;" data-price="19,99€">
-                            <img class="miniaturas" onclick="change(1)" id="imageAzul" src="https://i.ibb.co/Yy6Rcg9/hmgoepprod-Azul.jpg"  width="20%" alt="Azul" border="0" style="cursor: pointer;" data-price="22,95€">
-                            <img class="miniaturas" onclick="change(2)" id="imageBeige" src="https://i.ibb.co/m0ygyvW/hmgoepprod-Beige.jpg" width="20%" alt="Beige" border="0" style="cursor: pointer;" data-price="24,99€">
-                            <img class="miniaturas" onclick="change(3)" id="imageMarron" src="https://i.ibb.co/bQsV0Jc/hmgoepprod-Marron.jpg"  width="20%" alt="Marron" border="0" style="cursor: pointer;" data-price="26,95€">
-                            <img class="miniaturas" onclick="change(4)" id="imageRojo" src="https://i.ibb.co/BK8XNBw/hmgoepprod-Rojo.jpg"  width="20%" alt="Rojo" border="0" style="cursor: pointer;" data-price="28,95€">
-                            <img class="miniaturas" onclick="change(5)" id="imageVerde" src="https://i.ibb.co/Y7Rnmwh/hmgoepprod-Verde.jpg"  width="20%" alt="Verde" border="0" style="cursor: pointer;" data-price="32,95€"> 
+                            <img class="miniaturas" onclick="change(0)" id="imageBlanca" src="https://i.ibb.co/nfzC8bJ/hmgoepprod-Blanca.jpg" width="20%" alt="Crema" style="cursor: pointer;" data-price="19,99€" data-option="https://i.ibb.co/StD3PQx/hmgoepprod-Blanca2.jpg">
+                            <img class="miniaturas" onclick="change(1)" id="imageAzul" src="https://i.ibb.co/Yy6Rcg9/hmgoepprod-Azul.jpg"  width="20%" alt="Azul" border="0" style="cursor: pointer;" data-price="22,95€" data-option="https://i.ibb.co/6chkyhm/hmgoepprod-Azul2.jpg">
+                            <img class="miniaturas" onclick="change(2)" id="imageBeige" src="https://i.ibb.co/m0ygyvW/hmgoepprod-Beige.jpg" width="20%" alt="Beige" border="0" style="cursor: pointer;" data-price="24,99€" data-option="https://i.ibb.co/yyK8x3x/hmgoepprod-Beige2.jpg">
+                            <img class="miniaturas" onclick="change(3)" id="imageMarron" src="https://i.ibb.co/bQsV0Jc/hmgoepprod-Marron.jpg"  width="20%" alt="Marron" border="0" style="cursor: pointer;" data-price="26,95€" data-option="https://i.ibb.co/NCzPQH9/hmgoepprod-Marron2.jpg">
+                            <img class="miniaturas" onclick="change(4)" id="imageRojo" src="https://i.ibb.co/BK8XNBw/hmgoepprod-Rojo.jpg"  width="20%" alt="Rojo" border="0" style="cursor: pointer;" data-price="28,95€" data-option="https://i.ibb.co/svGjYmH/hmgoepprod-Rojo2.jpg">
+                            <img class="miniaturas" onclick="change(5)" id="imageVerde" src="https://i.ibb.co/Y7Rnmwh/hmgoepprod-Verde.jpg"  width="20%" alt="Verde" border="0" style="cursor: pointer;" data-price="32,95€" data-option="https://i.ibb.co/0JzCCPQ/hmgoepprod-Verde2.jpg"> 
                         </div>
                         <h4 class="atributo">Size:</h4>
                         <form action="">
-                            <select name="sizes" id="sizes">
+                            <select name="sizes" id="sizes"> <!--onchange()-->
                                 <option value="size" >&nbsp;&nbsp;Seleccionar talla</option>
                                 <option value="xs" >&nbsp;&nbsp;XS</option>
                                 <option value="s" >&nbsp;&nbsp;S</option>
@@ -82,7 +75,7 @@
                         </form>
                     
                         <div class="button-buy">
-                            <a href="" onclick="createBuyer()">AÑADIR</a>
+                            <a href="#two" onclick="createBuyer()">AÑADIR</a>
                         </div>
                    
 
