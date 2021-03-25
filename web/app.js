@@ -1,3 +1,34 @@
+// CLIENT CONTENT RESET
+
+function resetClient() {
+    client = {
+        username: "",
+        email: "",
+        password: "",
+        firstName: "",
+        lastName: "",
+        birthday: "",
+        address1: "",
+        address2: "",
+        postalCode: "",
+        country: "",
+        phoneCode: "",
+        phone: "",
+        regularAddress: "",
+        shipping: "",
+        shippingEstimate: "",
+        gift: "",
+        gMessage: "",
+        gImage: ""
+    };
+
+    $inputs.forEach((input) => {
+        input.value = "";
+    });
+
+    document.getElementById("talla").value = "size";
+}
+
 //################    TIMER
 
 //Function to calculate the purchase time in minutes and seconds
@@ -17,9 +48,9 @@ function minuteAlerts() {
     //Event listener that ends the purchase and shows the total time spent
     document.getElementById('finishBttn').addEventListener('click', () =>{
         let endTime = new Date();
-        let totalMls = endTime - startTime
+        let totalMls = endTime - startTime;
         let totalTime = timeCalculus(totalMls);
-        document.querySelector('#five .timer').classList.toggle('off');
+        document.querySelector('#five .timer').classList = 'timer';
         document.querySelector('#five .timer').innerHTML = '<legend><h2>Total time</h2></legend>'
         document.querySelector('#five .timer').innerHTML += 'Your purchase took: ' + totalTime;
         finished = true;
@@ -30,6 +61,7 @@ function minuteAlerts() {
     let timerArr = document.querySelectorAll('.timer');
 
     let t = setInterval(() => {
+        //Shows the timer popup every minute before reaching 5 minutes
         if (counter < 4 && finished == false) {
             console.log(counter);
             counter++;
@@ -42,12 +74,26 @@ function minuteAlerts() {
                 }, 5000);
             }
 
+        //Creates a popup to block the site and returns to the main page
         } else if (counter == 4 && finished == false) {
             console.log(counter);
-            alert('Te has pasao!');
-            let startPage = document.getElementById('one');
-            startPage.scrollIntoView();
+            let shade = document.createElement('div');
+            shade.id = 'popupShade';
+            document.querySelector('body').appendChild(shade);
+            let popup = document.createElement('div');
+            popup.id = 'popup';
+            popup.innerHTML = "<p>We are sorry but you've spent the maximum time allowed for the purchase.</p><p>You will be redirected to the main page in 5 seconds.</p>"
+            document.querySelector('body').appendChild(popup);
+            setTimeout(() => {
+                popup.remove();
+                shade.remove();
+                let startPage = document.getElementById('one');
+                startPage.scrollIntoView();
+                resetClient();
+            }, 5000);
             clearInterval(t);
+
+        //Ends the interval if the customer finishes the purchase
         } else if (finished == true) {
             clearInterval(t);
         }
@@ -56,43 +102,3 @@ function minuteAlerts() {
 
 minuteAlerts();
 
-//################    PROGRESS BAR
-
-// So this over here...
-/*
-
-function progressBar()  {
-    let progressState = document.getElementById("progress_state");
-
-    if (progressState == 1)   {
-        document.getElementById("progress").style.width = "0%";
-        document.getElementsByClassName("circle-one").style.visibility = 'visible';
-
-    }   else if (progressState == 2)    {
-        document.getElementById("progress").style.width = "34%";
-        document.getElementsByClassName("circle-two").style.visibility = 'visible';
-
-    }   else if (progressState == 3)    {
-        document.getElementById("progress").style.width = "67%";
-        document.getElementsByClassName("circle-three").style.visibility = 'visible';
-
-    }   else if (progressState == 4)    {
-        document.getElementById("progress").style.width = "100%";
-        document.getElementsByClassName("circle-four").style.visibility = 'visible';
-
-    }   else {
-        document.getElementById("progress").style.width = "0%";
-        document.getElementsByClassName("circle-one").style.visibility = 'hidden';
-        document.getElementsByClassName("circle-two").style.visibility = 'hidden';
-        document.getElementsByClassName("circle-three").style.visibility = 'hidden';
-        document.getElementsByClassName("circle-four").style.visibility = 'hidden';
-    }
-}
-*/
-
-//...is a mess!    | I'm all out of ideas on how to implement it. Sorry, but I'm bad at math.
-
-
-//MUST implement progress code in HTML. Add "progress_state" ID/class.
-
-//Another way to do it... By using event listeners on buttons "addressBttn", "profileBttn", etc.

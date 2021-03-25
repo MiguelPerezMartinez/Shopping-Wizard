@@ -6,6 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/progress-bar.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="validation.css">
         <title>Shopping Wizard</title>
@@ -73,7 +75,7 @@
                                 <option value="xl">&nbsp;&nbsp;XL</option>
                             </select>
                         </form>
-                        <button>BUY</button>
+                        <button class="next"><a href="#two">BUY</a></button>
                         <p class="membership">Hazte miembro hoy y consigue -15% en tu compra</p>
                     </fieldset>
                     <fieldset>
@@ -88,10 +90,10 @@
             <!-- SECTION 2: PROFILE -->
 
             <section class="slide" id="two">
-                <main>
-                    <fieldset>
-                        <legend><h2>Profile</h2></legend>
-                        <form>
+                    <main>
+                        <fieldset>
+                            <legend><h2>Profile</h2></legend>
+                            <form>
                             <label for="username">Username</label>
                             <input autocomplete="" type="text" id="username" class="validable" placeholder="Enter a username" maxlength="20" required />
                             <label for="email">Email</label>
@@ -100,179 +102,190 @@
                             <input type="password" id="password" class="validable" placeholder="A - a - number - >8 - <20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Must contain at least one number and one uppercase and lowercase letter, and a min:8 and max:20 characters" required />
                             <label for="confirm-password">Confirm password</label>
                             <input type="password" id="confirm-password" class="validable" placeholder="Confirm your password"  autocomplete="off" required/>
-                        </form>
-                    </fieldset>
-                </main>
-                <aside>
-                    <fieldset>
-                        <legend><h2>Next step</h2></legend>
-                        <div>
-                            <ul id="profile-info">
-                            </ul>
-                        </div>
-                        <button id="profileBttn">Next</button>
-                    </fieldset>
-                    <fieldset>
-                        <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
-                    </fieldset>
-                    <fieldset class="timer off">
-                        <legend><h2>Timer</h2></legend>
+                        </fieldset>
+                    </main>
+                    <aside>
+                        <fieldset>
+                            <legend><h2>Next step</h2></legend>
+                            <div>
+                                <ul id="profile-info">
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <button type="reset" class="reset two-buttons">Reset form</button>
+                                <button id="profileBttn" class="next two-buttons"><a href="#three">Next</a></button>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
+                        </fieldset>
+                        <fieldset class="timer off">
+                            <legend><h2>Timer</h2></legend>
 
-                    </fieldset>
-                </aside>
-                <div class="footer">
-                    
-                </div class="footer">
+                        </fieldset>
+                    </aside>
+                    <div class="footer">
+                        
+                    </div class="footer">
+                </form>
             </section>
 
 
             <!-- SECTION 3: ADDRESS -->
 
             <section class="slide" id="three">
-                <main>
-                    <fieldset>
-                    <legend><h2>Address:</h2></legend>
-                    <form>
-                        <div class="uno">
-                            <div>
-                                <p>First Name</p>
-                                <input type="text" id="first-name" class="validable" placeholder="First name" maxlength="20" required>
-                            </div>
-                            <div>
-                                <p>Last name</p>
-                                <input type="text" id="last-name" class="validable" placeholder="Last name" maxlength="20" required>
-                            </div>
-                            <div>
-                                <p>Birthday</p>
-                                <input type="date" id="birthday" class="validable" placeholder="Birthday" data-date-format="DD/MM/YYYY" required>
-                            </div>
-                            <div>
-                                <p>Address 1</p>
-                                <input type="text" id="address-one" class="validable" placeholder="Address 1" maxlength="50" required>
-                            </div>
-                            <div>
-                                <p>Address 2</p>
-                                <input type="text" id="address-two" class="validable" placeholder="Address 2" maxlength="50">
-                            </div>
-                        </div>
-                        <div class="dos">
-                            <div>
-                                <p>Postal code</p>
-                                <input type="number" id="postal-code" class="validable" placeholder="Postal code" maxlength="5" required>
-                            </div>
-                            <div>
-                                <p>Country</p>
-                                <select id="country" class="validable" name="add_country">
-                                    <option value="Andorra">Andorra</option>
-                                    <option value="España">España</option>
-                                    <option value="Francia">Francia</option>
-                                    <option value="Alemania">Alemania</option>
-                                    <option value="Grecia">Grecia</option>
-                                </select>
-                            </div>
-                            <div>
-                                <p>Phone</p>
-                                <div id="phone">
-                                    <select id="phone-prefix" class="validable" name="add_phone_country">
-                                        <option value="AND-376">AND</option>
-                                        <option value="ESP-34">ESP</option>
-                                        <option value="FRA-33">FRA</option>
-                                        <option value="DEU-49">AND</option>
-                                        <option value="GRC-30">GRC</option>
-                                    </select>
-                                    <input type="tel" id="add-phone" class="validable" placeholder="Phone" name="add_phone" pattern="[0-9]{9}" required>
+                    <main>
+                        <fieldset>
+                        <legend><h2>Address:</h2></legend>
+                        <form>
+                            <div class="uno">
+                                <div>
+                                    <p>First Name</p>
+                                    <input type="text" id="first-name" class="validable" placeholder="First name" maxlength="20" required>
+                                </div>
+                                <div>
+                                    <p>Last name</p>
+                                    <input type="text" id="last-name" class="validable" placeholder="Last name" maxlength="20" required>
+                                </div>
+                                <div>
+                                    <p>Birthday</p>
+                                    <input type="date" id="birthday" class="validable" placeholder="Birthday" data-date-format="DD/MM/YYYY" required>
+                                </div>
+                                <div>
+                                    <p>Address 1</p>
+                                    <input type="text" id="address-one" class="validable" placeholder="Address 1" maxlength="50" required>
+                                </div>
+                                <div>
+                                    <p>Address 2</p>
+                                    <input type="text" id="address-two" class="validable" placeholder="Address 2" maxlength="50">
                                 </div>
                             </div>
-                            <div class="regular-address">
-                                <input type="checkbox" id="regular-address" class="validable">
-                                <p>This is my regular address</p>
+                            <div class="dos">
+                                <div>
+                                    <p>Postal code</p>
+                                    <input type="number" id="postal-code" class="validable" placeholder="Postal code" maxlength="5" required>
+                                </div>
+                                <div>
+                                    <p>Country</p>
+                                    <select id="country" class="validable" name="add_country">
+                                        <option value="Andorra">Andorra</option>
+                                        <option value="España">España</option>
+                                        <option value="Francia">Francia</option>
+                                        <option value="Alemania">Alemania</option>
+                                        <option value="Grecia">Grecia</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>Phone</p>
+                                    <div id="phone">
+                                        <select id="phone-prefix" class="validable" name="add_phone_country">
+                                            <option value="AND-376">AND</option>
+                                            <option value="ESP-34">ESP</option>
+                                            <option value="FRA-33">FRA</option>
+                                            <option value="DEU-49">AND</option>
+                                            <option value="GRC-30">GRC</option>
+                                        </select>
+                                        <input type="tel" id="add-phone" class="validable" placeholder="Phone" name="add_phone" pattern="[0-9]{9}" required>
+                                    </div>
+                                </div>
+                                <div class="regular-address">
+                                    <input type="checkbox" id="regular-address" class="validable">
+                                    <p>This is my regular address</p>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                    </fieldset>
-                </main>
-                <aside>
-                    <fieldset>
-                        <legend><h2>Next step</h2></legend>
-                        <div>
-                            <ul id="address-info">
-                            </ul>
-                        </div>
-                        <button id="addressBttn">Next</button>
-                    </fieldset>
-                    <fieldset>
-                        <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
-                    </fieldset>
-                    <fieldset class="timer off">
-                        <legend><h2>Timer</h2></legend>
+                        </fieldset>
+                    </main>
+                    <aside>
+                        <fieldset>
+                            <legend><h2>Next step</h2></legend>
+                            <div>
+                                <ul id="address-info">
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <button type="reset" class="reset two-buttons">Reset form</button>
+                                <button id="addressBttn" class="next"><a href="#four">Next</a></button>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
+                        </fieldset>
+                        <fieldset class="timer off">
+                            <legend><h2>Timer</h2></legend>
 
-                    </fieldset>
-                </aside>
+                        </fieldset>
+                    </aside>
+                </form>
             </section>
 
 
             <!-- SECTION 4: SHIPPING -->
 
             <section class="slide" id="four">
-                <main>
-                    <fieldset>
-                        <legend><h2>Shipping</h2></legend>
-                        <h4>Shipping type:</h4>
-                        <div>
-                            <input type="radio" id="free-shipping" class="shipping-time" name="shipping-time">
-                            <label for="free">Free Shipping</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="extra-shipping" class="shipping-time" name="shipping-time">
-                            <label for="extra">Extra Shipping (48h) <b>4,99€</b></label>
-                        </div>
-                        <div>
-                            <input type="radio" id="premium-shipping" class="shipping-time" name="shipping-time">
-                            <label for="premium">Premium Shipping (24h) <b>9,99€</b></label>
-                        </div>
-                        <div id="shipping-date">
-                            <h4>Your order will arrive on:</h4>
-                            <p id="shipping-estimate">
-                            </p>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="gift" name="gift" value="gift-toggle">
-                            <label for="gift-toggle">Is it a gift?</label>
-                        </div>
-                        <div class="gift-message">
+                    <main>
+                        <fieldset>
+                            <legend><h2>Shipping</h2></legend>
+                            <h4>Shipping type:</h4>
+                            <form>
                             <div>
-                                <label for="gift-title">Gift title:</label>
-                                <input class="gift-title" id="gift-title" type="text" name="gift-title"></input>
+                                <input type="radio" id="free-shipping" class="shipping-time" name="shipping-time" value="Free Shipping" data-price="0">
+                                <label for="free">Free Shipping</label>
                             </div>
                             <div>
-                                <label for="gift-message">Gift message:</label>
-                                <textarea class="message" id="gift-message" rows="10" cols="50" maxlength="100" name="gift-message"></textarea>
-                                <div id="gift-message-count"></div>
+                                <input type="radio" id="extra-shipping" class="shipping-time" name="shipping-time" value="Extra Shipping" data-price="4,99€">
+                                <label for="extra">Extra Shipping (48h) <b>4,99€</b></label>
                             </div>
-                        </div>
-                        <div id="file-uploader">
-                            <label id="file-label" for="upload-photo">Browse...</label>
-                            <input type="file" name="photo" id="upload-photo" />
-                        </div>
-                    </fieldset>
-                </main>
-                <aside>
-                    <fieldset>
-                        <legend><h2>Next step</h2></legend>
-                        <div>
-                            <ul id="shipping-info">
-                            </ul>
-                        </div>
-                        <button id="shippingBttn">Next</button>
-                    </fieldset>
-                    <fieldset>
-                        <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
-                    </fieldset>
-                    <fieldset class="timer off">
-                        <legend><h2>Timer</h2></legend>
+                            <div>
+                                <input type="radio" id="premium-shipping" class="shipping-time" name="shipping-time" value="Premium Shipping" data-price="9,99€">
+                                <label for="premium">Premium Shipping (24h) <b>9,99€</b></label>
+                            </div>
+                            <div id="shipping-date">
+                                <h4>Your order will arrive on:</h4>
+                                <p id="shipping-estimate">
+                                </p>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="gift" name="gift" value="gift-toggle">
+                                <label for="gift-toggle">Is it a gift?</label>
+                            </div>
+                            <div class="gift-message">
+                                <div>
+                                    <label for="gift-title">Gift title:</label>
+                                    <input class="gift-title validable" id="gift-title" type="text" name="gift-title"></input>
+                                </div>
+                                <div>
+                                    <label for="gift-message">Gift message:</label>
+                                    <textarea class="message validable" id="gift-message" rows="10" cols="50" maxlength="100" name="gift-message"></textarea>
+                                    <div id="gift-message-count"></div>
+                                </div>
+                                <div id="file-uploader">
+                                    <label id="file-label" for="upload-photo">Browse...</label>
+                                    <input type="file" name="photo" id="upload-photo" />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </main>
+                    <aside>
+                        <fieldset>
+                            <legend><h2>Next step</h2></legend>
+                            <div>
+                                <ul id="shipping-info">
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <button class="reset two-buttons">Reset form</button>
+                                <button id="shippingBttn"><a href="#five">Next</a></button>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
+                        </fieldset>
+                        <fieldset class="timer off">
+                            <legend><h2>Timer</h2></legend>
 
-                    </fieldset>
-                </aside>
+                        </fieldset>
+                    </aside>
+                </form>
             </section>
 
 
@@ -303,10 +316,11 @@
                 <aside>
                     <fieldset>
                         <legend><h2>Your order</h2></legend>
-                        <p>Jumper: <span></span></p>
-                        <p><span></span> <span></span></p>
-                        <p>Total: <span></span></p>
-                        <button id="finishBttn">FINISH</button>
+                        <div>
+                            <ul id="finish-info">
+                            </ul>
+                        </div>
+                        <button id="finishBttn"><a href="#">FINISH</a></button>
                     </fieldset>
                     <fieldset>
                         <a href="#one">1</a> - <a href="#two">2</a> - <a href="#three">3</a> - <a href="#four">4</a> - <a href="#five">5</a>
@@ -324,7 +338,7 @@
     <script src="app.js"></script>
     <script src="validation.js"></script>
 
-    <!-- <script src="client.js"></script> -->
+
     <script src="info.js"></script>
     </body>
 </html>
