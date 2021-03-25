@@ -88,8 +88,18 @@ aside *{
     -ms-overflow-style: none;
 }
 
+.buttons{
+    display:flex;
+}
+
+.buttons > button{
+    margin:5px;
+    border:0px;
+}
+
 button{
     background-color:#A69D94;
+    text-decoration:none;
     width:100%;
     text-align: center;
     border:0px;
@@ -97,11 +107,13 @@ button{
 
 button:hover{
     background-color:#807871;
+    border:0px;
 }
 
 button:focus{
-    background-color:#3d3936;
+    /* background-color:#3d3936; */
     color:#A69D94;
+    border:0px;
 }
 
 button a{
@@ -126,21 +138,11 @@ fieldset{
 legend{
     /* border:1px solid #A69D94; */
     text-align:center;
-    padding:0px 100px;
+    padding:0px 5%;
     border-radius:10px;
 }
 
-#profile-info{
-    text-decoration:none;
-    list-style:none;
-}
-
-#address-info{
-    text-decoration:none;
-    list-style:none;
-}
-
-#shipping-info{
+#profile-info,#address-info,#shipping-info,#finish-info{
     text-decoration:none;
     list-style:none;
 }
@@ -291,6 +293,7 @@ legend{
     position:absolute;
     top:5%;
     left:10%;
+    z-index: 2;
 }
 
 .left div{
@@ -319,10 +322,25 @@ legend{
     width:100%;
     margin:2%;
     height:100%;
-    background-image:url("img/hmgoepprodBlanca.jpeg");
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
+    overflow: hidden; 
+}
+
+.center img{
+    max-width: 100%;
+    transition: all 0.7s ease;
+}
+
+.center img:hover{
+    transform: scale(1.5);
+    transition: all 0.7s ease; 
+}
+
+.touch-auto{
+    touch-action: auto;
+    overflow: scroll;
 }
 
 .atributo{
@@ -358,8 +376,14 @@ legend{
     background-image:url("img/hmgoepprodMarron.jpeg");
 }
 
-.rojo{
-    background-image:url("img/hmgoepprodRojo.jpeg");
+/*
+.center img{
+    transform-origin: 30% 70%;
+    transition: transform 1s, filter .5s ease-out;
+}
+
+.center img:hover{
+    transform: scale(2);
 }
 
 .beige{
@@ -499,11 +523,6 @@ legend{
 #four main fieldset h4{
     margin-top:0px;
     margin-bottom:10px;
-}
-
-#four main fieldset legend h2{
-    margin-bottom:0px;
-    padding:0px;
 }
 
 #four main fieldset *{
