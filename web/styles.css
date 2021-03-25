@@ -20,6 +20,17 @@ header{
     border-radius:10px 10px 0px 0px;
 }
 
+#header-wrapper {
+    width: 100%;
+    border-bottom: 10px;
+    display: flex;
+}
+
+.main-logo  {
+    width:10%;
+
+}
+
 .general{
     display: flex;
     scroll-snap-type: x mandatory;
