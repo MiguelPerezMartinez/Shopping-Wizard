@@ -51,7 +51,6 @@ function printInfo(){
   $finish_list.innerHTML += '<li>' + client.shipping + ': ' + client.shippingPrice + '</li>';
   client.productPrice = 10;
   client.finishPrice = function(){return this.shippingPrice + this.productPrice};
-  console.log(client.finishPrice)
   $finish_list.innerHTML += '<li>Total price: ' + client.finishPrice + '</li>';
 }
 

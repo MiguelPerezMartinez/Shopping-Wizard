@@ -98,7 +98,7 @@
                     <main>
                         <fieldset>
                             <legend><h2>Profile</h2></legend>
-                            <form>
+                            <form action="#three" id="formProfile">
                             <label for="username">Username</label>
                             <input autocomplete="" type="text" id="username" class="validable" placeholder="Enter a username" maxlength="20" required />
                             <label for="email">Email</label>
@@ -118,7 +118,8 @@
                             </div>
                             <div class="buttons">
                                 <button type="reset" class="reset two-buttons">Reset form</button>
-                                <button id="profileBttn" class="next two-buttons"><a href="#three">Next</a></button>
+                                <button id="profileBttn" class="next two-buttons" type="submit" form="formProfile">Next</button>
+                                <!-- <a href="#three">Next</a> -->
                             </div>
                         </fieldset>
                         <fieldset>
@@ -139,7 +140,7 @@
                     <main>
                         <fieldset>
                         <legend><h2>Address:</h2></legend>
-                        <form>
+                        <form action="#four" id="formAddress">
                             <div class="uno">
                                 <div>
                                     <p>First Name</p>
@@ -206,7 +207,7 @@
                             </div>
                             <div class="buttons">
                                 <button type="reset" class="reset two-buttons">Reset form</button>
-                                <button id="addressBttn" class="next"><a href="#four">Next</a></button>
+                                <button id="addressBttn" class="next" type="submit" form="formAddress">Next</button>
                             </div>
                         </fieldset>
                         <fieldset>
@@ -228,7 +229,7 @@
                         <fieldset>
                             <legend><h2>Shipping</h2></legend>
                             <h4>Shipping type:</h4>
-                            <form>
+                            <form action="#five" id="formShipping">
                             <div>
                                 <input type="radio" id="free-shipping" class="shipping-time" name="shipping-time" value="Free Shipping" data-price="0">
                                 <label for="free">Free Shipping</label>
@@ -276,7 +277,7 @@
                             </div>
                             <div class="buttons">
                                 <button class="reset two-buttons">Reset form</button>
-                                <button id="shippingBttn"><a href="#five">Next</a></button>
+                                <button id="shippingBttn" type="submit" form="formShipping">Next</button>
                             </div>
                         </fieldset>
                         <fieldset>
@@ -335,5 +336,6 @@
         <script src="validation.js"></script>
         <script src="product.js"></script>
         <script src="info.js"></script>
+        <script src="progress.js"></script>
     </body>
 </html>

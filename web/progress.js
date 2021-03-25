@@ -5,42 +5,47 @@ const nextBtn2 = document.getElementById('addressBttn');
 const nextBtn3 = document.getElementById('shippingBttn');
 const nextBtn4 = document.getElementById('finishBttn');
 
-/*
+
 const circleOne = document.getElementsByClassName('circle-one');
-const circleTwo = document.getElementsByClassName('circle-two');
-const circleThree = document.getElementsByClassName('circle-three');
-const circleFour = document.getElementsByClassName('circle-four');
-*/
+const circleTwo = document.querySelector('.circle-two');
+const circleThree = document.querySelector('.circle-three');
+const circleFour = document.querySelector('.circle-four');
+
 
 const progressBar = document.getElementById('progress');
 
 const progressContainer = document.getElementById('progress-bar-container')
 
+
 // Button and progress bar interaction
 
-purchaseBtn.onclick = function()   {
-    progressContainer.style.display = 'visible';
+purchaseBtn.addEventListener('click', function()   {
+    progressContainer.style.visibility = 'visible';
     progressBar.style.width = '0%';
-}
+})
 
 nextBtn1.onclick = function()   {
     progressContainer.style.visibility = 'visible';
     progressBar.style.width = '34%';
+    circleTwo.style.backgroundColor = '#A69D94';
 }
 
 nextBtn2.onclick = function()   {
     progressContainer.style.visibility = 'visible';
     progressBar.style.width = '66%';
+    circleThree.style.backgroundColor = '#A69D94';
 }
 
 nextBtn3.onclick = function()   {
     progressContainer.style.visibility = 'visible';
-    progressBar.style.width = '100%';
+    progressBar.style.width = '99%';
+    circleFour.style.backgroundColor = '#A69D94';
 }
 
 nextBtn4.onclick = function()   {
     progressContainer.style.visibility = 'visible';
-    progressBar.style.width = '100%';
+    progressBar.style.width = '99%';
+    circleFour.style.backgroundColor = '#A69D94';
 }
 
 
