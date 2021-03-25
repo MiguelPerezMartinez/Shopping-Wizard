@@ -62,6 +62,7 @@ function resetClient() {
             input.style.backgroundColor = 'rgb(255, 255, 255)';
         } else if (input == country) {
             input.value = 'Andorra';
+            input.style.backgroundColor = 'rgb(255, 255, 255)';
         } else {
         input.value = "";
         input.style.backgroundColor = 'rgb(255, 255, 255)';
@@ -216,7 +217,7 @@ function minuteAlerts() {
         } else if (finished == true) {
             clearInterval(t);
         }
-    },6000); //60000
+    },60000); //60000
 }
 
 document.getElementById('productBttn').addEventListener('click', minuteAlerts);
