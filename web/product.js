@@ -14,7 +14,6 @@ function change(num){
   imageLeft[1].src = descriptionOption;
   text.innerHTML = description;
   text2.innerHTML = description2;
-  
 }
 
 // función para cambiar las imagenes (diferentes imagenes del mismo producto) en la imagen central

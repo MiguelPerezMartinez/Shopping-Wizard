@@ -1,6 +1,6 @@
 //  END POPUP
 
-function endPopup() {
+function endPopup(totalTime) {
     //We create a shaded layer that covers all the viewport
     let endShade = document.createElement('div');
     endShade.className = 'popupShade';
@@ -9,6 +9,12 @@ function endPopup() {
     //Main element where the 'Purchase ended' data is shown
     let endPopup = document.createElement('div');
     endPopup.id = 'endPopup';
+
+    //Purchase spent time
+    let finalTimer = document.createElement('div');
+    finalTimer.id = 'finalTimer';
+    finalTimer.innerHTML= totalTime;
+
 
     //Product section with info and the image
     let endProduct = document.createElement('div');
@@ -31,12 +37,16 @@ function endPopup() {
 
     //Button
     let restart = document.createElement('button');
+    let restartLink = document.createElement('a');
+    restartLink.setAttribute('href', '#one');
     restart.id = 'restart';
-    restart.innerHTML = 'FINISH';
+    restart.setAttribute('value', 'FINISH');
+    restart.appendChild(restartLink);
 
     //Appending all the elements
     endProduct.appendChild(endImg);
     endProduct.appendChild(endInfo);
+    endPopup.appendChild(finalTimer);
     endPopup.appendChild(endProduct);
     endPopup.appendChild(clientInfo);
     endPopup.appendChild(restart);
@@ -100,7 +110,7 @@ function minuteAlerts() {
         let endTime = new Date();
         let totalMls = endTime - startTime;
         let totalTime = timeCalculus(totalMls);
-        endPopup();
+        endPopup(totalTime);
         finished = true;
         return finished;
     });
@@ -148,4 +158,4 @@ function minuteAlerts() {
     },60000); //60000
 }
 
-document.querySelector('.button-buy').addEventListener('click', minuteAlerts);
+document.getElementById('productBttn').addEventListener('click', minuteAlerts);
