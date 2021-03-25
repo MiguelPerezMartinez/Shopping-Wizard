@@ -47,15 +47,28 @@ function resetClient() {
         sizes: ""
     };
 
-
     document.querySelector("#profile-info").innerHTML = "";
     document.querySelector("#address-info").innerHTML = "";
     document.querySelector("#shipping-info").innerHTML = "";
+    document.querySelector("#product-info").innerHTML = "";
     document.querySelector("#finish-info").innerHTML = "";
 
     //Removing all content from the input fields
+    let phoneCoun = document.getElementById('phone-prefix');
+    let country = document.getElementById('country')
     $inputs.forEach((input) => {
+        if (input == phoneCoun) {
+            input.value = 'AND-376';
+        } else if (input == country) {
+            input.value = 'Andorra';
+        }else if (input == 'free-shipping' || input == 'extra-shipping' || input == 'premium-shipping') {
+            let radioOptions = document.querySelectorAll('.shipping-time');
+            radioOptions.forEach((option) => {
+                option.checked = false;
+            });
+        } else {
         input.value = "";
+        }
     });
 
     //Getting the size selector to default
@@ -97,7 +110,7 @@ function endPopup(totalTime) {
     clientInfo.id = 'clientInfo';
     let completeName = client.firstName + ' ' + client.lastName;
     let completeAddress = client.address1 + ' ' + client.address2 + ' ';
-    clientInfo.innerHTML = '<p><strong>Name: </strong>' + '</p></br><p><strong>Address:</strong></br>' + completeAddress + '</p></br><p> ' + client.postalCode + ', ' + client.country + '</p></br><p><strong>Shipping: </strong>' + client.shipping + '</p></br><p><strong>Estimated delivery: </strong>' + client.shippingEstimate + '</p>';
+    clientInfo.innerHTML = '<p><strong>Name: </strong>' + completeName + '</p></br><p><strong>Address:</strong></br>' + completeAddress + '</p></br><p> ' + client.postalCode + ', ' + client.country + '</p></br><p><strong>Shipping: </strong>' + client.shipping + '</p></br><p><strong>Estimated delivery: </strong>' + client.shippingEstimate + '</p>';
 
     //Button
     let restart = document.createElement('button');
@@ -193,7 +206,7 @@ function minuteAlerts() {
         } else if (finished == true) {
             clearInterval(t);
         }
-    },6000); //60000
+    },60000); //60000
 }
 
 document.getElementById('productBttn').addEventListener('click', minuteAlerts);
