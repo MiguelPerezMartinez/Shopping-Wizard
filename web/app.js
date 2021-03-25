@@ -1,8 +1,23 @@
+function scrollThree() {
+    let pageThree = document.getElementById('three');
+    pageThree.scrollIntoView();
+}
+
+function scrollFour() {
+    let pageFour = document.getElementById('four');
+    pageFour.scrollIntoView();
+}
+
+function scrollFive() {
+    let pageFive = document.getElementById('five');
+    pageFive.scrollIntoView();
+}
+
 
 // CLIENT CONTENT RESET
 
 function resetClient() {
-    //We set the product again to empty it
+    //We set the client data again to empty it
     client = {
         username: "",
         email: "",
@@ -24,13 +39,27 @@ function resetClient() {
         gImage: ""
     };
 
+    //We set the product again to empty it
+    buyers = {
+        price: "",
+        colors: "",
+        hoodie: "",
+        sizes: ""
+    };
+
+
+    document.querySelector("#profile-info").innerHTML = "";
+    document.querySelector("#address-info").innerHTML = "";
+    document.querySelector("#shipping-info").innerHTML = "";
+    document.querySelector("#finish-info").innerHTML = "";
+
     //Removing all content from the input fields
     $inputs.forEach((input) => {
         input.value = "";
     });
 
     //Getting the size selector to default
-    document.getElementById("talla").value = "size";
+    document.getElementById("sizes").value = "size";
 }
 
 //  END POPUP
@@ -90,9 +119,10 @@ function endPopup(totalTime) {
         let pageOne = document.getElementById('one');
         pageOne.scrollIntoView();
         endPopup.remove();
-        endshade.remove();
+        endShade.remove();
         resetClient();
         OurBuyersData = [];
+        document.getElementById("sizes").value = "size";
     });
 }
 
@@ -163,7 +193,7 @@ function minuteAlerts() {
         } else if (finished == true) {
             clearInterval(t);
         }
-    },60000); //60000
+    },6000); //60000
 }
 
 document.getElementById('productBttn').addEventListener('click', minuteAlerts);
