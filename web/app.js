@@ -1,59 +1,3 @@
-//  END POPUP
-
-function endPopup(totalTime) {
-    //We create a shaded layer that covers all the viewport
-    let endShade = document.createElement('div');
-    endShade.className = 'popupShade';
-    document.querySelector('body').appendChild(endShade);
-
-    //Main element where the 'Purchase ended' data is shown
-    let endPopup = document.createElement('div');
-    endPopup.id = 'endPopup';
-
-    //Purchase spent time
-    let finalTimer = document.createElement('div');
-    finalTimer.id = 'finalTimer';
-    finalTimer.innerHTML= totalTime;
-
-
-    //Product section with info and the image
-    let endProduct = document.createElement('div');
-    endProduct.id = 'endProduct';
-
-    //Product image
-    let endImg = document.createElement('div');
-    let imgUrl = 'url("' + OurBuyersData[0].hoodie + '")';
-
-    //Product info
-    let endInfo = document.createElement('div');
-    endInfo.innerHTML = '<h2>Hoodie</h2></br><p><strong>Size: </strong>' + OurBuyersData[0].sizes + '</p></br><p><strong>Color: </strong>' + OurBuyersData[0].colors + '</p></br><p><strong>Total price: </strong>'/*  + totalPrice + '</p>' */;
-
-    //Client and shipping info
-    let clientInfo = document.createElement('div');
-    clientInfo.id = 'clientInfo';
-    let completeName = client.firstName + ' ' + client.lastName;
-    let completeAddress = client.address1 + ' ' + client.address2 + ' ';
-    clientInfo.innerHTML = '<p><strong>Name: </strong>' + '</p></br><p><strong>Address:</strong></br>' + completeAddress + '</p></br><p> ' + client.postalCode + ', ' + client.country + '</p></br><p><strong>Shipping: </strong>' + client.shipping + '</p></br><p><strong>Estimated delivery: </strong>' + client.shippingEstimate + '</p>';
-
-    //Button
-    let restart = document.createElement('button');
-    let restartLink = document.createElement('a');
-    restartLink.setAttribute('href', '#one');
-    restart.id = 'restart';
-    restart.setAttribute('value', 'FINISH');
-    restart.appendChild(restartLink);
-
-    //Appending all the elements
-    endProduct.appendChild(endImg);
-    endProduct.appendChild(endInfo);
-    endPopup.appendChild(finalTimer);
-    endPopup.appendChild(endProduct);
-    endPopup.appendChild(clientInfo);
-    endPopup.appendChild(restart);
-    document.querySelector('body').appendChild(endPopup);
-    document.querySelector('#endProduct div:first-child').style.backgroundImage = imgUrl;
-}
-
 
 // CLIENT CONTENT RESET
 
@@ -87,6 +31,69 @@ function resetClient() {
 
     //Getting the size selector to default
     document.getElementById("talla").value = "size";
+}
+
+//  END POPUP
+
+function endPopup(totalTime) {
+    //We create a shaded layer that covers all the viewport
+    let endShade = document.createElement('div');
+    endShade.className = 'popupShade';
+    document.querySelector('body').appendChild(endShade);
+
+    //Main element (pop up) where the 'Purchase ended' data is shown
+    let endPopup = document.createElement('div');
+    endPopup.id = 'endPopup';
+
+    //Spent time counter
+    let finalTimer = document.createElement('div');
+    finalTimer.id = 'finalTimer';
+    finalTimer.innerHTML= totalTime;
+
+
+    //Product section with info and the product image
+    let endProduct = document.createElement('div');
+    endProduct.id = 'endProduct';
+
+    //Product image
+    let endImg = document.createElement('div');
+    let imgUrl = 'url("' + OurBuyersData[0].hoodie + '")';
+
+    //Product info
+    let endInfo = document.createElement('div');
+    endInfo.innerHTML = '<h2>Hoodie</h2></br><p><strong>Size: </strong>' + OurBuyersData[0].sizes + '</p></br><p><strong>Color: </strong>' + OurBuyersData[0].colors + '</p></br><p><strong>Total price: </strong>'/*  + totalPrice + '</p>' */;
+
+    //Client and shipping info
+    let clientInfo = document.createElement('div');
+    clientInfo.id = 'clientInfo';
+    let completeName = client.firstName + ' ' + client.lastName;
+    let completeAddress = client.address1 + ' ' + client.address2 + ' ';
+    clientInfo.innerHTML = '<p><strong>Name: </strong>' + '</p></br><p><strong>Address:</strong></br>' + completeAddress + '</p></br><p> ' + client.postalCode + ', ' + client.country + '</p></br><p><strong>Shipping: </strong>' + client.shipping + '</p></br><p><strong>Estimated delivery: </strong>' + client.shippingEstimate + '</p>';
+
+    //Button
+    let restart = document.createElement('button');
+    restart.id = 'restart';
+    restart.innerHTML = 'FINISH';
+
+    //Appending all the elements
+    endProduct.appendChild(endImg);
+    endProduct.appendChild(endInfo);
+    endPopup.appendChild(finalTimer);
+    endPopup.appendChild(endProduct);
+    endPopup.appendChild(clientInfo);
+    endPopup.appendChild(restart);
+    document.querySelector('body').appendChild(endPopup);
+    document.querySelector('#endProduct div:first-child').style.backgroundImage = imgUrl;
+
+    //EVENT LISTENER TO RESTART AND CLEAR THE OJECTS
+    restart.addEventListener('click', () => {
+        let pageOne = document.getElementById('one');
+        pageOne.scrollIntoView();
+        endPopup.remove();
+        endshade.remove();
+        resetClient();
+        OurBuyersData = [];
+    });
 }
 
 //################    TIMER
@@ -148,7 +155,8 @@ function minuteAlerts() {
                 let startPage = document.getElementById('one');
                 startPage.scrollIntoView();
                 resetClient();
-            }, 60000);
+                OurBuyersData = [];
+            }, 5000);
             clearInterval(t);
 
         //Ends the interval if the customer finishes the purchase

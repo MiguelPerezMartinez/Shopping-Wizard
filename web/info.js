@@ -47,7 +47,7 @@ function printInfo(){
   $shipping_list.innerHTML += '<li>Gift message: ' + client.gift + "<br>" + client.gMessage + '</li>';
 
   //FINISH
-  $finish_list.innerHTML = '<li>Hoodie : ' + OurBuyersData[0].price + '</li>';
+  $finish_list.innerHTML = '<li>Hoodie : ' + 'OurBuyersData[0].price' + '</li>';
   $finish_list.innerHTML += '<li>' + client.shipping + ': ' + client.shippingPrice + '</li>';
   client.productPrice = 10;
   client.finishPrice = function(){return this.shippingPrice + this.productPrice};
