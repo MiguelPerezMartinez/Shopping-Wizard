@@ -30,7 +30,6 @@ nextBtn1.onclick = function()   {
         progressContainer.style.visibility = 'visible';
         progressBar.style.width = '34%';
         circleTwo.style.backgroundColor = '#A69D94';
-        window.location.replace("/web/index.html#three");
     }
 }
 
