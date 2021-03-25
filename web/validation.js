@@ -147,7 +147,9 @@ function validEmail(target){
 }
 
 function validPassword(target){
-  let pattern = /^[a-zA-Z0-9_*!¡"·$%&/()=?¿+-]+$/;
+  //let pattern = /^[a-zA-Z0-9_*!¡"·$%&/()=?¿+-]+$/;
+  let pattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]).{8,}/;
+
   return (pattern.test(target.value) && target.value.length >= 8 && target.value.length <= 20);
 }
 
