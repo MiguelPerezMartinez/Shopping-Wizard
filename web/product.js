@@ -65,7 +65,7 @@ function updateBuyers(){
   for (let i = 0; i < OurBuyersData.length; i++){
       totalData.innerHTML = totalData.innerHTML  +
       '<li>Product Name: ' + 'Hoodie' + '</li>' +
-      '<li>Price: ' + OurBuyersData[i].price + '</li>' +
+      '<li>Price: ' + OurBuyersData[i].price + '€</li>' +
       '<li>Color: ' + OurBuyersData[i].colors + '</li>' +
       '<li>Size: ' + OurBuyersData[i].sizes + '</li>'
   };

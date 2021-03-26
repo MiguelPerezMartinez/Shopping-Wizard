@@ -62,6 +62,7 @@ function resetClient() {
             input.style.backgroundColor = 'rgb(255, 255, 255)';
         } else if (input == country) {
             input.value = 'Andorra';
+            input.style.backgroundColor = 'rgb(255, 255, 255)';
         } else {
         input.value = "";
         input.style.backgroundColor = 'rgb(255, 255, 255)';
@@ -112,15 +113,16 @@ function endPopup(totalTime) {
     let imgUrl = 'url("' + OurBuyersData[0].hoodie + '")';
 
     //Product info
+    let finalPrice = eval(OurBuyersData[0].price) + eval(client.shippingPrice);
     let endInfo = document.createElement('div');
-    endInfo.innerHTML = '<h2>Hoodie</h2></br><p><strong>Size: </strong>' + OurBuyersData[0].sizes + '</p></br><p><strong>Color: </strong>' + OurBuyersData[0].colors + '</p></br><p><strong>Total price: </strong>'/*  + totalPrice + '</p>' */;
+    endInfo.innerHTML = '<h2>Hoodie</h2></br><p><strong>Size: </strong>' + OurBuyersData[0].sizes + '</p></br><p><strong>Color: </strong>' + OurBuyersData[0].colors + '</p></br><p><strong>Total price: </strong>'  + finalPrice.toFixed(2) + '€</p>';
 
     //Client and shipping info
     let clientInfo = document.createElement('div');
     clientInfo.id = 'clientInfo';
     let completeName = client.firstName + ' ' + client.lastName;
-    let completeAddress = client.address1 + ' ' + client.address2 + ' ';
-    clientInfo.innerHTML = '<p><strong>Name: </strong>' + completeName + '</p></br><p><strong>Address:</strong></br>' + completeAddress + '</p></br><p> ' + client.postalCode + ', ' + client.country + '</p></br><p><strong>Shipping: </strong>' + client.shipping + '</p></br><p><strong>Estimated delivery: </strong>' + client.shippingEstimate + '</p>';
+    let completeAddress = client.address1 + ', ' + client.address2 + ' ';
+    clientInfo.innerHTML = '<p><strong>Name: </strong>' + completeName + '</p></br><p><strong>Address:</strong></p></br><p>' + completeAddress + '</p></br><p> ' + client.postalCode + ', ' + client.country + '</p></br><p><strong>Shipping: </strong>' + client.shipping + '</p></br><p><strong>Estimated delivery: </strong>' + client.shippingEstimate + '</p>';
 
     //Button
     let restart = document.createElement('button');
