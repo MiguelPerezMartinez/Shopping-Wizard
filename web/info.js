@@ -47,10 +47,11 @@ function printInfo(){
   $shipping_list.innerHTML += '<li>Gift message: ' + client.gift + "<br>" + client.gMessage + '</li>';
 
   //FINISH
-  $finish_list.innerHTML = '<li>Hoodie : ' + 'OurBuyersData[0].price' + '</li>';
-  $finish_list.innerHTML += '<li>' + client.shipping + ': ' + client.shippingPrice + '</li>';
-  client.productPrice = 10;
-  client.finishPrice = function(){return this.shippingPrice + this.productPrice};
-  $finish_list.innerHTML += '<li>Total price: ' + client.finishPrice + '</li>';
+  $finish_list.innerHTML = '<li>Hoodie : ' + OurBuyersData[0].price + '€</li>';
+  $finish_list.innerHTML += '<li>' + client.shipping + ': ' + client.shippingPrice + '€</li>';
+  console.log(eval(OurBuyersData[0].price));
+  console.log(eval(client.shippingPrice));
+  let finishPrice = eval(OurBuyersData[0].price) + eval(client.shippingPrice);
+  $finish_list.innerHTML += '<li>Total price: ' + finishPrice.toFixed(2) + '€</li>';
 }
 
