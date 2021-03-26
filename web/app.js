@@ -189,7 +189,7 @@ function minuteAlerts() {
                 timerArr[x].classList.toggle('off');
                 setTimeout(() => {
                     timerArr[x].classList.toggle('off');
-                }, 60000);
+                }, 5000);
             }
 
         //Creates a popup to block the site and returns to the main page
@@ -216,7 +216,7 @@ function minuteAlerts() {
         } else if (finished == true) {
             clearInterval(t);
         }
-    },6000); //60000
+    },60000); //60000
 }
 
 document.getElementById('productBttn').addEventListener('click', minuteAlerts);

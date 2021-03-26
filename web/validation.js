@@ -46,6 +46,28 @@ let client = {
 };
 
 
+//VARS FOR VALIDATION FORM
+//###PROFILE
+var valid_username
+var valid_email
+var valid_confirm_password
+
+
+//###ADDRESS
+var valid_first_name
+var valid_last_name
+var valid_birthday
+var valid_address1
+var valid_address2
+var valid_postal_code
+var valid_phone
+
+//###SHIPPING
+var valid_shipping
+
+
+
+
 //VALIDATION FUNCTION
 
 function validation(event){
@@ -56,44 +78,48 @@ function validation(event){
   validConditions(target)
 
   switch(event.target.id){
+    
+    //profile
     case "username":
       valid = validUsername(event,target);
-      if (valid == true){client.username = event.target.value;};
+      if (valid == true){client.username = event.target.value;valid_username = true;}else{valid_username = false;};
       break;
     case "email":
       valid = validEmail(target);
-      if (valid == true){client.email = event.target.value;};
+      if (valid == true){client.email = event.target.value;valid_email = true;}else{valid_email = false;};
       break;
     case "password":
-      valid = validPassword(target); 
+      valid = validPassword(target);
       break;
     case "confirm-password":
       valid = validConfirmPassword(target);
-      if (valid == true){client.password = event.target.value;};
+      if (valid == true){client.password = event.target.value;valid_confirm_password = true;}else{valid_confirm_password = false;};
       break;
+
+    //address
     case "first-name":
       valid = validFirstLastName(event,target);
-      if (valid == true){client.firstName = event.target.value;};
+      if (valid == true){client.firstName = event.target.value;valid_first_name = true;}else{valid_first_name = false;};
       break;
     case "last-name":
       valid = validFirstLastName(event,target);
-      if (valid == true){client.lastName = event.target.value;};
+      if (valid == true){client.lastName = event.target.value;valid_last_name = true;}else{valid_last_name = false;};
       break;
     case "birthday":
       valid = validBirthday(target);
-      if (valid == true){client.birthday = event.target.value;};
+      if (valid == true){client.birthday = event.target.value;valid_birthday = true;}else{valid_birthday = false;};
       break;
     case "address-one":
       valid = validAddress(target);
-      if (valid == true){client.address1 = event.target.value;};
+      if (valid == true){client.address1 = event.target.value;valid_address1 = true;}else{valid_address1 = false;};
       break;
     case "address-two":
       valid = validAddress(target);
-      if (valid == true){client.address2 = event.target.value;};
+      if (valid == true){client.address2 = event.target.value;valid_address2 = true;}else{valid_address2 = false;};
       break;
     case "postal-code":
       valid = validPostalCode(target);
-      if (valid == true){client.postalCode = event.target.value;};
+      if (valid == true){client.postalCode = event.target.value;valid_postal_code = true;}else{valid_postal_code = false;};
       break;
     case "country":
       valid = true;
@@ -105,13 +131,15 @@ function validation(event){
       break;
     case "add-phone":
       valid = validPhone(target);
-      if (valid == true){client.phone = event.target.value;};
+      if (valid == true){client.phone = event.target.value;valid_phone = true;}else{valid_phone = false;};
       break;
     case "regular-address":
       //TODO: Pendiente de que al guardar en el objeto sea true o false. Se queda siempre en On.
       valid = true;
       if (valid == true){client.regularAddress = event.target.checked;};
       break;
+
+    //shipping
     case "gift-title":
       valid = validGiftTitle(target);
       if (valid == true){client.gift = event.target.value;};
@@ -132,8 +160,10 @@ function validation(event){
     target.style.backgroundColor = "rgb(166, 253, 192)";
   }else{
     target.style.backgroundColor = "rgb(253, 166, 166)";
-  }
-}
+  };
+
+  // confirmProfileForm(valid_username,valid_email,valid_confirm_password);
+};
 
 // VALIDATION REQUIREMENTS
 
@@ -209,18 +239,22 @@ function shippingCheck(event){
       shipping_date.setDate(shipping_date.getDate() + 5);
       client.shippingEstimate = shipping_date;
       client.shippingPrice = event.target.dataset.price;
+      valid = true;
       break;
     case "extra-shipping":
       shipping_date.setDate(shipping_date.getDate() + 2);
       client.shippingEstimate = shipping_date;
       client.shippingPrice = event.target.dataset.price;
+      valid = true;
       break;
     case "premium-shipping":
       shipping_date.setDate(shipping_date.getDate() + 1);
       client.shippingEstimate = shipping_date;
       client.shippingPrice = event.target.dataset.price;
+      valid = true;
       break;
   }
+  if(valid == true){valid_shipping = true;}else{valid_shipping = false};
   document.getElementById("shipping-estimate").innerHTML = shipping_date.toLocaleDateString();
   client.shipping = event.target.value;
   client.shippingEstimate = shipping_date.toLocaleDateString();
@@ -244,4 +278,28 @@ document.getElementById('gift-message').onkeyup = function () {
 };
 
 
+// CONFIRM FORMS
 
+function confirmProfileForm(valid_username,valid_email,valid_confirm_password){
+  if(valid_username == true && valid_email == true &&  valid_confirm_password == true){
+    return true
+  }else{
+    return false
+  }
+}
+
+function confirmAddressForm(valid_first_name,valid_last_name,valid_birthday,valid_address1,valid_address2,valid_postal_code,valid_phone){
+  if(valid_first_name == true && valid_last_name == true &&  valid_birthday == true &&  valid_address1 == true &&  valid_address2 == true &&  valid_postal_code == true &&  valid_phone == true){
+    return true
+  }else{
+    return false
+  }
+}
+
+function confirmShippingForm(valid_shipping){
+  if(valid_shipping == true){
+    return true
+  }else{
+    return false
+  }
+}

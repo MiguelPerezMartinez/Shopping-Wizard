@@ -16,38 +16,49 @@ const progressBar = document.getElementById('progress');
 
 const progressContainer = document.getElementById('progress-bar-container')
 
+// if(confirmProfileForm(valid_username,valid_email,valid_confirm_password) == true){};
 
 // Button and progress bar interaction
 
 purchaseBtn.addEventListener('click', function()   {
     progressContainer.style.visibility = 'visible';
     progressBar.style.width = '0%';
-    window.location.replace("/web/index.html#two");
 })
 
 nextBtn1.onclick = function()   {
     if(window.location.hash == "#two"){
         progressContainer.style.visibility = 'visible';
-        progressBar.style.width = '34%';
-        circleTwo.style.backgroundColor = '#A69D94';
+        if(confirmProfileForm(valid_username,valid_email,valid_confirm_password) == true){
+            console.log(confirmProfileForm(valid_username,valid_email,valid_confirm_password))
+            progressBar.style.width = '34%';
+            circleTwo.style.backgroundColor = '#A69D94';
+            window.location.replace("/web/index.html#three");
+        };
     }
 }
 
 nextBtn2.onclick = function()   {
-    if(window.location.hash == "#four"){
+    if(window.location.hash == "#three"){
         progressContainer.style.visibility = 'visible';
-        progressBar.style.width = '66%';
-        circleThree.style.backgroundColor = '#A69D94';
-        window.location.replace("/web/index.html#four");
+        if(confirmAddressForm(valid_first_name,valid_last_name,valid_birthday,valid_address1,valid_address2,valid_postal_code,valid_phone) == true){
+            progressBar.style.width = '66%';
+            circleThree.style.backgroundColor = '#A69D94';
+            window.location.replace("/web/index.html#four");
+        };
     }
 }
 
 nextBtn3.onclick = function()   {
-    if(window.location.hash == "#five"){
+    if(window.location.hash == "#four"){
         progressContainer.style.visibility = 'visible';
-        progressBar.style.width = '99%';
-        circleFour.style.backgroundColor = '#A69D94';
-        window.location.replace("/web/index.html#five");
+        console.log(confirmShippingForm(valid_shipping))
+        if(confirmShippingForm(valid_shipping) == true){
+            progressBar.style.width = '99%';
+            circleFour.style.backgroundColor = '#A69D94';
+            window.location.replace("/web/index.html#five");
+        }else{
+            console.log("es false");
+        };
     }
 }
 
